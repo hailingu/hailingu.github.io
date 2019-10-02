@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="Linhai">
 <meta property="og:description" content="leetcode 的第 1 题，考察数组的数组的遍历和 hash 表的使用。 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-30T11:52:31.983Z">
+<meta property="og:updated_time" content="2019-10-02T17:24:22.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Two Sum">
 <meta name="twitter:description" content="leetcode 的第 1 题，考察数组的数组的遍历和 hash 表的使用。 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。">
@@ -249,11 +249,21 @@
                 
               
 
-              <time title="Created: 2019-07-30 14:40:22 / Modified: 19:52:31" itemprop="dateCreated datePublished" datetime="2019-07-30T14:40:22+08:00">2019-07-30</time>
+              <time title="Created: 2019-07-30 14:40:22" itemprop="dateCreated datePublished" datetime="2019-07-30T14:40:22+08:00">2019-07-30</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-10-03 01:24:22" itemprop="dateModified" datetime="2019-10-03T01:24:22+08:00">2019-10-03</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -291,13 +301,12 @@
 <li>时间复杂度：O(n)，因为一次遍历。</li>
 <li>空间复杂度：O(n)，因为最坏的情况下，即最后两个元素才是最终的答案， hash 表中要存储 n - 1 个元素。</li>
 <li>执行结果：<ul>
-<li>执行用时 : <strong>3 ms</strong>, 在所有 Java 提交中击败了 <strong>99.05%</strong> 的用户</li>
-<li>内存消耗 : <strong>37.1 MB</strong>, 在所有 Java 提交中击败了 <strong>91.93%</strong> 的用户</li>
+<li>执行用时 : <strong>36ms</strong>, 在所有 Python 提交中击败了 <strong>98.75%</strong> 的用户</li>
+<li>内存消耗 : <strong>13.1 MB</strong>, 在所有 Python 提交中击败了 <strong>12.41%</strong> 的用户</li>
 </ul>
 </li>
 </ul>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.Map;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        int[] ans = new int[2];</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; nums.length; ++i) &#123;</span><br><span class="line">            if (map.containsKey(nums[i])) &#123;</span><br><span class="line">                ans[0] = map.get(nums[i]);</span><br><span class="line">                ans[1] = i;</span><br><span class="line">                break;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                map.put(target - nums[i], i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注: <em>使用 break 的原因是为了尽可能的保证这个函数只能通过最后一行返回结果。</em></p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):</span><br><span class="line">    def twoSum(self, nums, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: List[int]</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        idx = 0</span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">        </span><br><span class="line">        for num in nums:</span><br><span class="line">            t = target - num</span><br><span class="line">            if d.get(t) is not None:</span><br><span class="line">                return [d.get(t), idx]</span><br><span class="line">            else:</span><br><span class="line">                d[num] = idx</span><br><span class="line">            idx = idx + 1</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -378,7 +387,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -436,7 +445,11 @@
         
           
         
-        <span class="site-state-item-count">12</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
@@ -549,24 +562,7 @@
 
 
 
-  <script src="/js/next-boot.js?v=7.2.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="custom_mathjax_source">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  <script src="/js/next-boot.js?v=7.2.0"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
   
 
