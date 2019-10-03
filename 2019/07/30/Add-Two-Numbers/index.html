@@ -58,14 +58,14 @@
 </script>
 
   <meta name="description" content="leetcode 的第 2 题，考察链表的遍历和简单数学。 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。">
-<meta name="keywords" content="leetcode,two pointers,list,math">
+<meta name="keywords" content="leetcode,list,math,two pointers">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Add Two Numbers">
 <meta property="og:url" content="http://hailingu.com/2019/07/30/Add-Two-Numbers/index.html">
 <meta property="og:site_name" content="Linhai">
 <meta property="og:description" content="leetcode 的第 2 题，考察链表的遍历和简单数学。 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-31T07:51:37.289Z">
+<meta property="og:updated_time" content="2019-10-03T10:10:10.169Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Add Two Numbers">
 <meta name="twitter:description" content="leetcode 的第 2 题，考察链表的遍历和简单数学。 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。">
@@ -262,7 +262,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-07-31 15:51:37" itemprop="dateModified" datetime="2019-07-31T15:51:37+08:00">2019-07-31</time>
+                <time title="Modified: 2019-10-03 18:10:10" itemprop="dateModified" datetime="2019-10-03T18:10:10+08:00">2019-10-03</time>
               </span>
             
           
@@ -327,12 +327,13 @@ ans[i] = temp_ans[i] % 10;
 <li>时间复杂度：O(n)，因为一次遍历。</li>
 <li>空间复杂度：O(1)，额外的存储空间是常量，即 carrier 和一个虚拟的前驱节点。</li>
 <li>执行结果：<ul>
-<li>执行用时 : <strong>5 ms</strong>, 在所有 Java 提交中击败了 <strong>96.35%</strong> 的用户</li>
-<li>内存消耗 : <strong>47.1 MB</strong>, 在所有 Java 提交中击败了 <strong>73.02%</strong> 的用户</li>
+<li>执行用时 : <strong>52 ms</strong>, 在所有 Python 提交中击败了 <strong>95.67%</strong> 的用户</li>
+<li>内存消耗 : <strong>11.9 MB</strong>, 在所有 Python 提交中击败了 <strong>20.89%</strong> 的用户</li>
 </ul>
 </li>
 </ul>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * public class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123; val = x; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public ListNode addTwoNumbers(ListNode l1, ListNode l2) &#123;</span><br><span class="line">        ListNode ans = new ListNode(-1);</span><br><span class="line">        ListNode i1 = l1, i2 = l2, ansIter = ans;</span><br><span class="line"></span><br><span class="line">        int carrier = 0;</span><br><span class="line">        while (i1 != null &amp;&amp; i2 != null) &#123;</span><br><span class="line">            i1.val = i1.val + i2.val + carrier;</span><br><span class="line">            carrier = i1.val / 10;</span><br><span class="line">            i1.val = i1.val % 10;</span><br><span class="line">            ansIter.next = i1;</span><br><span class="line">            i1 = i1.next;</span><br><span class="line">            i2 = i2.next;</span><br><span class="line">            ansIter = ansIter.next;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        if (i1 == null &amp;&amp; i2 != null) &#123;</span><br><span class="line">            ansIter.next = i2;</span><br><span class="line">            while (i2 != null &amp;&amp; carrier &gt; 0) &#123;</span><br><span class="line">                i2.val = i2.val + carrier;</span><br><span class="line">                carrier = i2.val / 10;</span><br><span class="line">                i2.val = i2.val % 10;</span><br><span class="line">                ansIter.next = i2;</span><br><span class="line">                i2 = i2.next;</span><br><span class="line">                ansIter = ansIter.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        if (i1 != null &amp;&amp; i2 == null) &#123;</span><br><span class="line">            ansIter.next = i1;</span><br><span class="line">            while (i1 != null &amp;&amp; carrier &gt; 0) &#123;</span><br><span class="line">                i1.val = i1.val + carrier;</span><br><span class="line">                carrier = i1.val / 10;</span><br><span class="line">                i1.val = i1.val % 10;</span><br><span class="line">                ansIter.next = i1;</span><br><span class="line">                i1 = i1.next;</span><br><span class="line">                ansIter = ansIter.next;  </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (carrier &gt; 0) &#123;</span><br><span class="line">            ansIter.next = new ListNode(1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return ans.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">class ListNode(object):</span><br><span class="line">    def __init__(self, x):</span><br><span class="line">        self.val = x</span><br><span class="line">        self.next = None</span><br><span class="line"></span><br><span class="line">class Solution(object):</span><br><span class="line">    def addTwoNumbers(self, l1, l2):</span><br><span class="line">        dummyHead = ListNode(-1)</span><br><span class="line">        t1 = l1</span><br><span class="line">        t2 = l2</span><br><span class="line">        curr = dummyHead</span><br><span class="line"></span><br><span class="line">        carry = 0</span><br><span class="line">        while t1 is not None or t2 is not None:</span><br><span class="line">            x = 0 if t1 is None else t1.val</span><br><span class="line">            y = 0 if t2 is None else t2.val</span><br><span class="line"></span><br><span class="line">            tmp = x + y + carry</span><br><span class="line">            carry = tmp / 10</span><br><span class="line">            curr.next = ListNode(tmp % 10)</span><br><span class="line">            curr = curr.next</span><br><span class="line"></span><br><span class="line">            if t1 is not None:</span><br><span class="line">                t1 = t1.next</span><br><span class="line">            if t2 is not None:</span><br><span class="line">                t2 = t2.next</span><br><span class="line"></span><br><span class="line">        if carry != 0:</span><br><span class="line">            curr.next = ListNode(1)</span><br><span class="line"></span><br><span class="line">        return dummyHead.next</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -345,11 +346,11 @@ ans[i] = temp_ans[i] % 10;
         <div class="post-tags">
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/two-pointers/" rel="tag"># two pointers</a>
-          
             <a href="/tags/list/" rel="tag"># list</a>
           
             <a href="/tags/math/" rel="tag"># math</a>
+          
+            <a href="/tags/two-pointers/" rel="tag"># two pointers</a>
           
         </div>
         <div class="post-nav">
