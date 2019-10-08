@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="Linhai">
 <meta property="og:description" content="leetcode 的第 6 题，考察数组的数组的遍历。 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。  比如输入字符串为 &amp;quot;LEETCODEISHIRING&amp;quot; 行数为 3 时，排列如下：      L   C   I   R     E T O E S I I G     E   D   H   N">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-08T18:01:10.126Z">
+<meta property="og:updated_time" content="2019-10-08T19:18:22.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZigZag Conversion">
 <meta name="twitter:description" content="leetcode 的第 6 题，考察数组的数组的遍历。 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。  比如输入字符串为 &amp;quot;LEETCODEISHIRING&amp;quot; 行数为 3 时，排列如下：      L   C   I   R     E T O E S I I G     E   D   H   N">
@@ -262,7 +262,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-10-09 02:01:10" itemprop="dateModified" datetime="2019-10-09T02:01:10+08:00">2019-10-09</time>
+                <time title="Modified: 2019-10-09 03:18:22" itemprop="dateModified" datetime="2019-10-09T03:18:22+08:00">2019-10-09</time>
               </span>
             
           
@@ -302,24 +302,27 @@
     E T O E S I I G
     E   D   H   N
 </code></pre><a id="more"></a>
-<p>简单做一下计算，在给定行数为 n 的情况下，第一行元素的下标分别为，设 q = 2 * n - 2：</p>
-<pre><code>0, Idx[0] + 1 * q, Idx[1] + 1 * q, ...
-</code></pre><p>第二行元素的下标为，设 l 为行号，step1 = q - 2 * l， step2 = q - step1：</p>
-<pre><code>1， Idx[0] + step1, Idx[1] + step2, Idx[2] + step1, ...
+<p>简单做一下计算，在给定行数为 numRows 的情况下，第一行元素的下标分别为，设 step = 2 * numRows - 2：</p>
+<pre><code>Idx[0], Idx[0 + step], Idx[0 + step + step]...
+</code></pre><p>第二行元素的下标为，设 l 为行号（此时 l = 1），step1 = step - 2 * l， step2 = step - step1：</p>
+<pre><code>Idx[0 + l], Idx[0 + l + step1], Idx[0 + l + step1 + step2], Idx[0 + l + step + step1],  Idx[0 + l + step1 + step2 + step1 + step2]...
+</code></pre><p>第三行元素的下标为，（此时 l = 2）：</p>
+<pre><code>Idx[0 + l], Idx[0 + l + step1], Idx[0 + l + step1 + step2], Idx[0 + l + step + step1],  Idx[0 + l + step1 + step2 + step1 + step2]...
 </code></pre><p>直到最后一行：</p>
-<pre><code>n, Idx[0] + q, Idx[1] + 1 * q, ...
-</code></pre><p><em>Idx[1] = Idx[0] + q 或者 Idx[1] = Idx[0] + step1，希望这个表述能清楚。</em></p>
-<p>有一些特殊情况直接返回字符串即可，即 n = 1 或者 n 大于字符串长度的时候。</p>
+<pre><code>Idx[0] + n - 1, Idx[1] = Idx[0] + step, Idx[2] = Idx[1] + 1 * step, ...
+</code></pre><p>注意到 step = step1 + step2，即有 0 + l + step1 = 0 + l + step - 2 * l = step - l，所以在第 2 行到 n-2 行的下标可以修改为：</p>
+<pre><code>Idx[0 + l], Idx[0 + step - l], Idx[0 + step], Idx[0 + 2*step - l] ...
+</code></pre><p>有一些特殊情况直接返回字符串即可，即 n = 1 或者 n 大于字符串长度的时候。</p>
 <h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
 <li>时间复杂度：O(n)，因为一次遍历。</li>
 <li>空间复杂度：O(1)，没有额外存储。</li>
 <li>执行结果：<ul>
-<li>执行用时 : <strong>10 ms</strong>, 在所有 Java 提交中击败了 <strong>95.57%</strong> 的用户</li>
-<li>内存消耗 : <strong>40.4 MB</strong>, 在所有 Java 提交中击败了 <strong>83.84%</strong> 的用户</li>
+<li>执行用时 : <strong>48 ms</strong>, 在所有 Python 提交中击败了 <strong>84.40%</strong> 的用户</li>
+<li>内存消耗 : <strong>11.7 MB</strong>, 在所有 Python 提交中击败了 <strong>46.04%</strong> 的用户</li>
 </ul>
 </li>
 </ul>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String convert(String s, int numRows) &#123;</span><br><span class="line">        if (numRows &lt;= 1 || (s != null &amp;&amp; numRows &gt;= s.length())) &#123;</span><br><span class="line">            return s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        StringBuilder ans = new StringBuilder();</span><br><span class="line">        int totalStep = 2 * numRows - 2;</span><br><span class="line">        int nextStep = 0;</span><br><span class="line">        for (int i = 0; i &lt; numRows; ++i) &#123;</span><br><span class="line">            int j = i;</span><br><span class="line">            nextStep = 2 * i;</span><br><span class="line">            while (j &lt; s.length()) &#123;</span><br><span class="line">                ans.append(s.charAt(j));</span><br><span class="line">                if (nextStep == 0 || nextStep == totalStep) &#123;</span><br><span class="line">                    j += totalStep;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    j += totalStep - nextStep;</span><br><span class="line">                    nextStep = totalStep - nextStep;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return ans.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):</span><br><span class="line">    def convert(self, s, numRows):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type s: str</span><br><span class="line">        :type numRows: int</span><br><span class="line">        :rtype: str</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        l = len(s)</span><br><span class="line">        if numRows &lt;= 1 or (numRows &gt;= l):</span><br><span class="line">            return s</span><br><span class="line"></span><br><span class="line">        ans = &apos;&apos;</span><br><span class="line">        step = 2 * numRows - 2</span><br><span class="line"></span><br><span class="line">        for i in range(numRows):</span><br><span class="line">            j = 0</span><br><span class="line">            while j + i &lt; l:</span><br><span class="line">                ans += s[j + i]</span><br><span class="line">                if i != 0 and i != numRows - 1 and j + step - i &lt; l:</span><br><span class="line">                    ans += s[j + step - i]</span><br><span class="line"></span><br><span class="line">                j += step</span><br><span class="line">        return ans</span><br></pre></td></tr></table></figure>
 </code></pre>
     </div>
 
