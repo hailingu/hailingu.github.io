@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="Linhai">
 <meta property="og:description" content="leetcode 的第 6 题，考察数组的数组的遍历。 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。  比如输入字符串为 &amp;quot;LEETCODEISHIRING&amp;quot; 行数为 3 时，排列如下：      L   C   I   R     E T O E S I I G     E   D   H   N">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-08T19:18:22.039Z">
+<meta property="og:updated_time" content="2019-10-08T19:20:13.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZigZag Conversion">
 <meta name="twitter:description" content="leetcode 的第 6 题，考察数组的数组的遍历。 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。  比如输入字符串为 &amp;quot;LEETCODEISHIRING&amp;quot; 行数为 3 时，排列如下：      L   C   I   R     E T O E S I I G     E   D   H   N">
@@ -262,7 +262,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-10-09 03:18:22" itemprop="dateModified" datetime="2019-10-09T03:18:22+08:00">2019-10-09</time>
+                <time title="Modified: 2019-10-09 03:20:13" itemprop="dateModified" datetime="2019-10-09T03:20:13+08:00">2019-10-09</time>
               </span>
             
           
@@ -305,7 +305,7 @@
 <p>简单做一下计算，在给定行数为 numRows 的情况下，第一行元素的下标分别为，设 step = 2 * numRows - 2：</p>
 <pre><code>Idx[0], Idx[0 + step], Idx[0 + step + step]...
 </code></pre><p>第二行元素的下标为，设 l 为行号（此时 l = 1），step1 = step - 2 * l， step2 = step - step1：</p>
-<pre><code>Idx[0 + l], Idx[0 + l + step1], Idx[0 + l + step1 + step2], Idx[0 + l + step + step1],  Idx[0 + l + step1 + step2 + step1 + step2]...
+<pre><code>Idx[0 + l], Idx[0 + l + step1], Idx[0 + l + step1 + step2], Idx[0 + l + step + step1],  Idx[0 + l + 2*step]...
 </code></pre><p>第三行元素的下标为，（此时 l = 2）：</p>
 <pre><code>Idx[0 + l], Idx[0 + l + step1], Idx[0 + l + step1 + step2], Idx[0 + l + step + step1],  Idx[0 + l + step1 + step2 + step1 + step2]...
 </code></pre><p>直到最后一行：</p>
