@@ -245,7 +245,7 @@
                 
               
 
-              <time title="Created: 2019-10-09 20:19:10 / Modified: 22:58:58" itemprop="dateCreated datePublished" datetime="2019-10-09T20:19:10+08:00">2019-10-09</time>
+              <time title="Created: 2019-10-09 20:19:10 / Modified: 23:06:05" itemprop="dateCreated datePublished" datetime="2019-10-09T20:19:10+08:00">2019-10-09</time>
             </span>
           
             
@@ -265,18 +265,15 @@
 
       
           
-            <p>朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：</p>
+            <p>朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：</p>
 <script type="math/tex; mode=display">
 \begin{split}
 & P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\
 & \text{subject to } P(b) \neq 0
-\end{split}</script><p>另一个特征之间的相互独立意味着联合概率的链式法则，也叫 chain rule：</p>
+\end{split}</script><p>另一个特征的条件独立，意味着下面的式子成立：</p>
 <script type="math/tex; mode=display">
 \begin{split}
-P(c_k, x_1, \ldots, x_n) & = & P(x_1 | x_2, \ldots, x_n, c_k) P(x_2, \ldots, x_n, c_k) \\
-& = & P(x_1 | x_2, \ldots, x_n, c_k) P(x_2 | x_3, \ldots, x_n, c_k) P(x_3, \ldots, x_n, c_k) \\
-& = & ... \\
-& = & P(x_1 | x_2, \dots, x_n, c_k) \ldots P(x_n | c_k) P(c_k)
+P(x_1, x_2, \ldots , x_n | c_k) = P(x_1 | c_k)P(x_2 | c_k) \ldots P(x_n | c_k)
 \end{split}</script>
           
         
