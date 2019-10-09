@@ -57,19 +57,19 @@
   };
 </script>
 
-  <meta name="description" content="leetcode 的第 2 题，考察链表的遍历和简单数学。 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。">
-<meta name="keywords" content="leetcode,list,math,two pointers,medium">
+  <meta name="description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; P(b) \neq 0 \end{split}">
+<meta name="keywords" content="machine learning,write machine learning algorithm by hands,ml toys,nlp,naive bayesian">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Add Two Numbers">
-<meta property="og:url" content="http://hailingu.com/2019/07/30/Add-Two-Numbers/index.html">
+<meta property="og:title" content="ML-Toys-Chapter-2-Naive-Bayesian">
+<meta property="og:url" content="http://hailingu.com/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/index.html">
 <meta property="og:site_name" content="Linhai">
-<meta property="og:description" content="leetcode 的第 2 题，考察链表的遍历和简单数学。 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。">
+<meta property="og:description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; P(b) \neq 0 \end{split}">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-08T19:44:32.699Z">
+<meta property="og:updated_time" content="2019-10-09T14:41:45.025Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Add Two Numbers">
-<meta name="twitter:description" content="leetcode 的第 2 题，考察链表的遍历和简单数学。 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。">
-  <link rel="canonical" href="http://hailingu.com/2019/07/30/Add-Two-Numbers/">
+<meta name="twitter:title" content="ML-Toys-Chapter-2-Naive-Bayesian">
+<meta name="twitter:description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; P(b) \neq 0 \end{split}">
+  <link rel="canonical" href="http://hailingu.com/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/">
 
 
 <script id="page.configurations">
@@ -78,7 +78,7 @@
   };
 </script>
 
-  <title>Add Two Numbers | Linhai</title>
+  <title>ML-Toys-Chapter-2-Naive-Bayesian | Linhai</title>
   
 
 
@@ -215,7 +215,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/07/30/Add-Two-Numbers/">
+    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hailin">
@@ -229,7 +229,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">Add Two Numbers
+          <h1 class="post-title" itemprop="name headline">ML-Toys-Chapter-2-Naive-Bayesian
 
               
             
@@ -249,37 +249,12 @@
                 
               
 
-              <time title="Created: 2019-07-30 15:23:46" itemprop="dateCreated datePublished" datetime="2019-07-30T15:23:46+08:00">2019-07-30</time>
+              <time title="Created: 2019-10-09 20:19:10 / Modified: 22:41:45" itemprop="dateCreated datePublished" datetime="2019-10-09T20:19:10+08:00">2019-10-09</time>
             </span>
           
             
 
             
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-10-09 03:44:32" itemprop="dateModified" datetime="2019-10-09T03:44:32+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           <br/>
@@ -293,47 +268,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>leetcode 的第 2 题，考察链表的遍历和简单数学。</p>
-<pre><code>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
-</code></pre><a id="more"></a>
-<p>题目非常的贴心，数组已经按照逆序存储了，也即数字 123 在这题里用链表的表示是 3 -&gt; 2 -&gt; 1。这题的解法是数字对应位数相加，需要注意的是下面的两个细节：</p>
-<ul>
-<li>两个链表长度不一样如何办？</li>
-<li>进位如何处理？</li>
-</ul>
-<p>官方的示例：</p>
-<pre><code>(2 -&gt; 4 -&gt; 3) 
-      +        = (7 -&gt; 0 -&gt; 8)
-(5 -&gt; 6 -&gt; 4)
-</code></pre><p>长度不等的情况：</p>
-<pre><code>(2 -&gt; 4 -&gt; 3) 
-      +        = (7 -&gt; 4 -&gt; 3)
-(5)
-</code></pre><p>长度不等且进位的情况：</p>
-<pre><code>(2 -&gt; 4 -&gt; 3) 
-      +        = (1 -&gt; 0 -&gt; 4)
-(9 -&gt; 5)
-</code></pre><p>以及最终会进位的情况：</p>
-<pre><code>(2 -&gt; 4 -&gt; 9) 
-      +        = (1 -&gt; 0 -&gt; 0 -&gt; 1)
-(9 -&gt; 5)
-</code></pre><p>当然还有一种长度相等且没有进位的情况，这种情况最简单，就不列了。如果结果的链表用 ans 表示，输入相加的两个链表用 l1 和 l2 表示，用 ans[i] 表示 ans 的第 i 个节点，carrier 表示进位，那么：</p>
-<pre><code>temp_ans[i] = l1[i] + l2[i] + carrier
-carrier = temp_ans[i] / 10;
-ans[i] = temp_ans[i] % 10;
-</code></pre><p>当然如果最后 carrier 不为 0 的话，那么最终的 ans 还需要再加上一个节点。</p>
-<p><em>需要把各种情况考虑周全，有时候会忘了相加到最后 carrier 不为 0 的时候还需要新增一个节点的情况。</em></p>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
-<li>时间复杂度：O(n)，因为一次遍历。</li>
-<li>空间复杂度：O(1)，额外的存储空间是常量，即 carrier 和一个虚拟的前驱节点。</li>
-<li>执行结果：<ul>
-<li>执行用时 : <strong>52 ms</strong>, 在所有 Python 提交中击败了 <strong>95.67%</strong> 的用户</li>
-<li>内存消耗 : <strong>11.9 MB</strong>, 在所有 Python 提交中击败了 <strong>20.89%</strong> 的用户</li>
-</ul>
-</li>
-</ul>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">class ListNode(object):</span><br><span class="line">    def __init__(self, x):</span><br><span class="line">        self.val = x</span><br><span class="line">        self.next = None</span><br><span class="line"></span><br><span class="line">class Solution(object):</span><br><span class="line">    def addTwoNumbers(self, l1, l2):</span><br><span class="line">        dummyHead = ListNode(-1)</span><br><span class="line">        t1 = l1</span><br><span class="line">        t2 = l2</span><br><span class="line">        curr = dummyHead</span><br><span class="line"></span><br><span class="line">        carry = 0</span><br><span class="line">        while t1 is not None or t2 is not None:</span><br><span class="line">            x = 0 if t1 is None else t1.val</span><br><span class="line">            y = 0 if t2 is None else t2.val</span><br><span class="line"></span><br><span class="line">            tmp = x + y + carry</span><br><span class="line">            carry = tmp / 10</span><br><span class="line">            curr.next = ListNode(tmp % 10)</span><br><span class="line">            curr = curr.next</span><br><span class="line"></span><br><span class="line">            if t1 is not None:</span><br><span class="line">                t1 = t1.next</span><br><span class="line">            if t2 is not None:</span><br><span class="line">                t2 = t2.next</span><br><span class="line"></span><br><span class="line">        if carry != 0:</span><br><span class="line">            curr.next = ListNode(1)</span><br><span class="line"></span><br><span class="line">        return dummyHead.next</span><br></pre></td></tr></table></figure>
-</code></pre>
+        <p>朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：</p>
+<script type="math/tex; mode=display">
+\begin{split}
+& P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\
+& P(b) \neq 0
+\end{split}</script>
     </div>
 
     
@@ -344,21 +284,21 @@ ans[i] = temp_ans[i] % 10;
           
         
         <div class="post-tags">
-            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
           
-            <a href="/tags/list/" rel="tag"># list</a>
+            <a href="/tags/write-machine-learning-algorithm-by-hands/" rel="tag"># write machine learning algorithm by hands</a>
           
-            <a href="/tags/math/" rel="tag"># math</a>
+            <a href="/tags/ml-toys/" rel="tag"># ml toys</a>
           
-            <a href="/tags/two-pointers/" rel="tag"># two pointers</a>
+            <a href="/tags/nlp/" rel="tag"># nlp</a>
           
-            <a href="/tags/medium/" rel="tag"># medium</a>
+            <a href="/tags/naive-bayesian/" rel="tag"># naive bayesian</a>
           
         </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2019/07/30/Two-Sum/" rel="next" title="Two Sum">
-                <i class="fa fa-chevron-left"></i> Two Sum
+              <a href="/2019/10/09/String-to-Integer/" rel="next" title="String to Integer">
+                <i class="fa fa-chevron-left"></i> String to Integer
               </a>
             
           </div>
@@ -366,10 +306,6 @@ ans[i] = temp_ans[i] % 10;
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2019/07/30/Longest-Substring-Without-Repeating-Characters/" rel="prev" title="Longest Substring Without Repeating Characters">
-                Longest Substring Without Repeating Characters <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -399,17 +335,8 @@ ans[i] = temp_ans[i] % 10;
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -528,23 +455,6 @@ ans[i] = temp_ans[i] % 10;
 
         </div>
       </div>
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度分析"><span class="nav-number">1.</span> <span class="nav-text">复杂度分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
     </div>
   </aside>
@@ -606,7 +516,7 @@ ans[i] = temp_ans[i] % 10;
 
 
 
-  <script src="/js/next-boot.js?v=7.2.0"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script src="/js/next-boot.js?v=7.2.0"></script>
 
   
 
@@ -621,6 +531,51 @@ ans[i] = temp_ans[i] % 10;
 
 
 
+  
+    
+      <script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+    
   
 
 
