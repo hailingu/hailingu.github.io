@@ -57,18 +57,18 @@
   };
 </script>
 
-  <meta name="description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}另一个特征的条件独立，意味着下面的式子成立：  \be">
+  <meta name="description" content="所谓理论朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}另一个特征的条件独立，意味着下面的式子成立：">
 <meta name="keywords" content="machine learning,write machine learning algorithm by hands,ml toys,nlp,naive bayesian">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ML-Toys-Chapter-2-Naive-Bayesian">
 <meta property="og:url" content="http://hailingu.com/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/index.html">
 <meta property="og:site_name" content="Linhai">
-<meta property="og:description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}另一个特征的条件独立，意味着下面的式子成立：  \be">
+<meta property="og:description" content="所谓理论朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}另一个特征的条件独立，意味着下面的式子成立：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-09T15:28:43.524Z">
+<meta property="og:updated_time" content="2019-10-09T15:31:43.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ML-Toys-Chapter-2-Naive-Bayesian">
-<meta name="twitter:description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}另一个特征的条件独立，意味着下面的式子成立：  \be">
+<meta name="twitter:description" content="所谓理论朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}另一个特征的条件独立，意味着下面的式子成立：">
   <link rel="canonical" href="http://hailingu.com/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/">
 
 
@@ -249,7 +249,7 @@
                 
               
 
-              <time title="Created: 2019-10-09 20:19:10 / Modified: 23:28:43" itemprop="dateCreated datePublished" datetime="2019-10-09T20:19:10+08:00">2019-10-09</time>
+              <time title="Created: 2019-10-09 20:19:10 / Modified: 23:31:43" itemprop="dateCreated datePublished" datetime="2019-10-09T20:19:10+08:00">2019-10-09</time>
             </span>
           
             
@@ -268,7 +268,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：</p>
+        <h3 id="所谓理论"><a href="#所谓理论" class="headerlink" title="所谓理论"></a>所谓理论</h3><p>朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：</p>
 <script type="math/tex; mode=display">
 \begin{split}
 & P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\
@@ -276,7 +276,7 @@
 \end{split}</script><p>另一个特征的条件独立，意味着下面的式子成立：</p>
 <script type="math/tex; mode=display">
 \begin{split}
-P(x_1, x_2, \ldots , x_n | c_k) = P(x_1 | c_k)P(x_2 | c_k) \ldots P(x_n | c_k) = {\prod}\limits_{i = 1}^{n}P(x_i | c_k)
+P(x_1, x_2, \ldots , x_n | c_k) = P(x_1 | c_k)P(x_2 | c_k) \ldots P(x_n | c_k) = \prod\limits_{i = 1}^{n}P(x_i | c_k)
 \end{split}</script>
     </div>
 
@@ -339,8 +339,17 @@ P(x_1, x_2, \ldots , x_n | c_k) = P(x_1 | c_k)P(x_2 | c_k) \ldots P(x_n | c_k) =
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -459,6 +468,23 @@ P(x_1, x_2, \ldots , x_n | c_k) = P(x_1 | c_k)P(x_2 | c_k) \ldots P(x_n | c_k) =
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#所谓理论"><span class="nav-number">1.</span> <span class="nav-text">所谓理论</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
