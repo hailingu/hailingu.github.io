@@ -58,14 +58,14 @@
 </script>
 
   <meta name="description" content="所谓理论朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}另一个特征的条件独立，意味着下面的式子成立：">
-<meta name="keywords" content="machine learning,nlp,naive bayesian,write machine learning algorithm by hands,ml toys">
+<meta name="keywords" content="machine learning,write machine learning algorithm by hands,ml toys,nlp,naive bayesian">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ML-Toys-Chapter-2-Naive-Bayesian">
 <meta property="og:url" content="http://hailingu.com/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/index.html">
 <meta property="og:site_name" content="Linhai">
 <meta property="og:description" content="所谓理论朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}另一个特征的条件独立，意味着下面的式子成立：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-09T15:43:15.879Z">
+<meta property="og:updated_time" content="2019-10-09T15:48:52.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ML-Toys-Chapter-2-Naive-Bayesian">
 <meta name="twitter:description" content="所谓理论朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}另一个特征的条件独立，意味着下面的式子成立：">
@@ -249,7 +249,7 @@
                 
               
 
-              <time title="Created: 2019-10-09 20:19:10 / Modified: 23:43:15" itemprop="dateCreated datePublished" datetime="2019-10-09T20:19:10+08:00">2019-10-09</time>
+              <time title="Created: 2019-10-09 20:19:10 / Modified: 23:48:52" itemprop="dateCreated datePublished" datetime="2019-10-09T20:19:10+08:00">2019-10-09</time>
             </span>
           
             
@@ -278,7 +278,10 @@
 \begin{split}
 P(x_1, x_2, \ldots , x_n | c_k) = P(x_1 | c_k)P(x_2 | c_k) \ldots P(x_n | c_k) = \prod\limits_{i = 1}^{n}P(x_i | c_k)
 \end{split}</script><p>这样结合贝叶斯定理，就可以计算出在给定特征 $x={x_1, x_2, \ldots, x_n}$ 的情况下，就可以计算出这个 $x$ 属于类别 $c_k$ 的概率，即 $P(c_k | x_1, \ldots, x_n)$。</p>
-
+<script type="math/tex; mode=display">
+\begin{split}
+P(c_k | x_1, \ldots, x_n) & = & \frac{P(x_1, \ldots, x_n | c_k)P(c_k)}{P(x_1, \ldots, x_n)}
+\end{split}</script>
     </div>
 
     
@@ -291,13 +294,13 @@ P(x_1, x_2, \ldots , x_n | c_k) = P(x_1 | c_k)P(x_2 | c_k) \ldots P(x_n | c_k) =
         <div class="post-tags">
             <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
           
-            <a href="/tags/nlp/" rel="tag"># nlp</a>
-          
-            <a href="/tags/naive-bayesian/" rel="tag"># naive bayesian</a>
-          
             <a href="/tags/write-machine-learning-algorithm-by-hands/" rel="tag"># write machine learning algorithm by hands</a>
           
             <a href="/tags/ml-toys/" rel="tag"># ml toys</a>
+          
+            <a href="/tags/nlp/" rel="tag"># nlp</a>
+          
+            <a href="/tags/naive-bayesian/" rel="tag"># naive bayesian</a>
           
         </div>
         <div class="post-nav">
