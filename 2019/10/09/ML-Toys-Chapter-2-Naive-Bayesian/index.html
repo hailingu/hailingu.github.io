@@ -57,18 +57,18 @@
   };
 </script>
 
-  <meta name="description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; P(b) \neq 0 \end{split}">
+  <meta name="description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}就这么简单的式子的">
 <meta name="keywords" content="machine learning,write machine learning algorithm by hands,ml toys,nlp,naive bayesian">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ML-Toys-Chapter-2-Naive-Bayesian">
 <meta property="og:url" content="http://hailingu.com/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/index.html">
 <meta property="og:site_name" content="Linhai">
-<meta property="og:description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; P(b) \neq 0 \end{split}">
+<meta property="og:description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}就这么简单的式子的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-09T14:41:45.025Z">
+<meta property="og:updated_time" content="2019-10-09T14:46:03.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ML-Toys-Chapter-2-Naive-Bayesian">
-<meta name="twitter:description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; P(b) \neq 0 \end{split}">
+<meta name="twitter:description" content="朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征之间相互独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：  \begin{split} &amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\ &amp; \text{subject to } P(b) \neq 0 \end{split}就这么简单的式子的">
   <link rel="canonical" href="http://hailingu.com/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/">
 
 
@@ -249,7 +249,7 @@
                 
               
 
-              <time title="Created: 2019-10-09 20:19:10 / Modified: 22:41:45" itemprop="dateCreated datePublished" datetime="2019-10-09T20:19:10+08:00">2019-10-09</time>
+              <time title="Created: 2019-10-09 20:19:10 / Modified: 22:46:03" itemprop="dateCreated datePublished" datetime="2019-10-09T20:19:10+08:00">2019-10-09</time>
             </span>
           
             
@@ -272,8 +272,9 @@
 <script type="math/tex; mode=display">
 \begin{split}
 & P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\
-& P(b) \neq 0
-\end{split}</script>
+& \text{subject to } P(b) \neq 0
+\end{split}</script><p>就这么简单的式子的</p>
+
     </div>
 
     
