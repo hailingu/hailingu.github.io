@@ -20,22 +20,20 @@
     var CONFIG = {"hostname":"hailingu.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="17 年年底的时候，组织过了一次公司内部的 Machine Learning 的学习和分享活动，当时积累下来不少有价值的内容，没有好好整理，趁着这次重整 blog 的机会，把这部分内容整理出来。幸运的是，自 17 年底来， Machine Learning 并没有再出现像 10 年以后的四五年内的爆发式的发展，所以这部分的内容不会显的特别过时。甚至，现在的 Machine Learning 有点凉">
+  <meta name="description" content="接触 Computational Advertising 其实很久了，但是真正在实践中去尝试，却是 2020 年开始的故事了。也从 2020 年开始，运气不错的站在了传统企业数字化转型的风口，当了一次会飞的猪。这一组 Blog 将会总结我在过去的 3 年中实际遇到的，可以落地的 Computational Advertising 的场景、技术和方法，虽然可能没有一堆堆的论文那么高大上，但是这些故事">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ML Toys Preface">
-<meta property="og:url" content="http://hailingu.com/2019/07/30/ML-Toys-Preface/index.html">
+<meta property="og:title" content="“Computational-Advertising-1-Preface”">
+<meta property="og:url" content="http://hailingu.com/2022/11/04/Computational-Advertising-1-Preface/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="17 年年底的时候，组织过了一次公司内部的 Machine Learning 的学习和分享活动，当时积累下来不少有价值的内容，没有好好整理，趁着这次重整 blog 的机会，把这部分内容整理出来。幸运的是，自 17 年底来， Machine Learning 并没有再出现像 10 年以后的四五年内的爆发式的发展，所以这部分的内容不会显的特别过时。甚至，现在的 Machine Learning 有点凉">
+<meta property="og:description" content="接触 Computational Advertising 其实很久了，但是真正在实践中去尝试，却是 2020 年开始的故事了。也从 2020 年开始，运气不错的站在了传统企业数字化转型的风口，当了一次会飞的猪。这一组 Blog 将会总结我在过去的 3 年中实际遇到的，可以落地的 Computational Advertising 的场景、技术和方法，虽然可能没有一堆堆的论文那么高大上，但是这些故事">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-07-30T10:41:09.000Z">
-<meta property="article:modified_time" content="2022-11-03T16:16:02.874Z">
+<meta property="article:published_time" content="2022-11-03T17:41:47.000Z">
+<meta property="article:modified_time" content="2022-11-03T17:47:21.020Z">
 <meta property="article:author" content="Hailin">
-<meta property="article:tag" content="machine learning">
-<meta property="article:tag" content="write machine learning algorithm by hands">
-<meta property="article:tag" content="ml toys">
+<meta property="article:tag" content="advertising">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://hailingu.com/2019/07/30/ML-Toys-Preface/">
+<link rel="canonical" href="http://hailingu.com/2022/11/04/Computational-Advertising-1-Preface/">
 
 
 <script id="page-configurations">
@@ -48,7 +46,7 @@
   };
 </script>
 
-  <title>ML Toys Preface | Hexo</title>
+  <title>“Computational-Advertising-1-Preface” | Hexo</title>
   
 
 
@@ -153,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/07/30/ML-Toys-Preface/">
+    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2022/11/04/Computational-Advertising-1-Preface/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -166,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ML Toys Preface
+          “Computational-Advertising-1-Preface”
         </h1>
 
         <div class="post-meta">
@@ -175,24 +173,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2019-07-30 18:41:09" itemprop="dateCreated datePublished" datetime="2019-07-30T18:41:09+08:00">2019-07-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-04 00:16:02" itemprop="dateModified" datetime="2022-11-04T00:16:02+08:00">2022-11-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a>
-                </span>
+              <time title="Created: 2022-11-04 01:41:47 / Modified: 01:47:21" itemprop="dateCreated datePublished" datetime="2022-11-04T01:41:47+08:00">2022-11-04</time>
             </span>
 
           
@@ -206,47 +189,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>17 年年底的时候，组织过了一次公司内部的 Machine Learning
-的学习和分享活动，当时积累下来不少有价值的内容，没有好好整理，趁着这次重整
-blog 的机会，把这部分内容整理出来。幸运的是，自 17 年底来， Machine
-Learning 并没有再出现像 10
-年以后的四五年内的爆发式的发展，所以这部分的内容不会显的特别过时。甚至，现在的
-Machine Learning 有点凉凉的感觉，就如 40 年前一样。</p>
-<span id="more"></span>
-<p>这篇是一个开篇，并且这个系列 blog 不会刻意的总结 Machine Learning
-所需要使用数学知识，会在具体实现某一个算法的时候，会总结出该算法所需要的必备的知识。之所以这个系列的
-blog 的题目中含有 toy
-这个词，是因为这样手动实现的算法是很难在工程上具有必须的效率和稳定性的，但是好处就是可以加深对算法的理解。在真实的环境中，也总是尽可能的调用开源的
-Machine Learning
-库的，令人安心的是，想要使用的算法，总是能找到对应的库、代码或者实现它的工具。</p>
-<p><em>纸上得来终觉浅，深知此事要躬行。</em></p>
-<p>这个系列 blog 的所有算法将会借助 Numpy 和 Python 3 来实现。</p>
-<p><em>脑子中一直有个想法，就是不用 numpy 实现算法，换句话说就是把 numpy
-也再做一遍。</em></p>
-<p>那到底什么是 Machine Learning？说实话，这个定义和什么是 Artificial
-Intelligence
-一样难给出，不同的人从不同的角度会给出不同的定义。这里贴一个大家普遍接受的定义：</p>
-<pre><code>Tom Mitchell, Machine Learning：
-    对于某类任务 T 和性能度量 M ，如果一个计算机程序 P 在 T 上以 M 衡量的性能随着经验 E 而自我完善，那么我们称这个计算机程序从经验 E 中学习。 </code></pre>
-<p>这种定义，看看就好，能理解更好。</p>
-<p>现在大家普遍理解的任务 T
-指的就是电影推荐、物体识别、物体分类这样的任务，当然还有高级一点的，如生成图像之类的任务，这些都可以是
-T 的范畴，经验 E 常常指代是用于输入到计算机程序 P 中的 T 的历史数据
-D，而 M 是用于评价程序 P 在任务 T 上表现的一些指标。更通俗来说， P
-就是用计算机代码表示的一个函数 F。</p>
-<p>上面的话其实不是 Tom Mitchell 的原话，原话长这样：</p>
-<pre><code>Tom Mitchell, Machine Learning：
-    对于某类任务 T 和性能度量 P ，如果一个计算机程序在 T 上以 P 衡量的性能随着经验 E 而自我完善，那么我们称这个计算机程序从经验 E 中学习。 </code></pre>
-<p>知道了什么是 Machine Learning，就可以动手写第一个 Machine Learning
-的程序了。</p>
-<ul>
-<li><em>T: Task，任务</em></li>
-<li><em>D: Data，数据</em></li>
-<li><em>P: Program，程序</em></li>
-<li><em>M: Measurement，度量指标</em></li>
-<li><em>E: Experience，经验</em></li>
-<li><em>F: Function，函数</em></li>
-</ul>
+        <p>接触 Computational Advertising
+其实很久了，但是真正在实践中去尝试，却是 2020 年开始的故事了。也从 2020
+年开始，运气不错的站在了传统企业数字化转型的风口，当了一次会飞的猪。这一组
+Blog 将会总结我在过去的 3 年中实际遇到的，可以落地的 Computational
+Advertising
+的场景、技术和方法，虽然可能没有一堆堆的论文那么高大上，但是这些故事是实实在在发生在我的身边的。如果有人看到了能有所收获，我的目的就达到了。</p>
 
     </div>
 
@@ -256,9 +204,7 @@ D，而 M 是用于评价程序 P 在任务 T 上表现的一些指标。更通�
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
-              <a href="/tags/write-machine-learning-algorithm-by-hands/" rel="tag"># write machine learning algorithm by hands</a>
-              <a href="/tags/ml-toys/" rel="tag"># ml toys</a>
+              <a href="/tags/advertising/" rel="tag"># advertising</a>
           </div>
 
         
@@ -267,13 +213,10 @@ D，而 M 是用于评价程序 P 在任务 T 上表现的一些指标。更通�
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/07/30/Longest-Substring-Without-Repeating-Characters/" rel="prev" title="Longest Substring Without Repeating Characters">
-      <i class="fa fa-chevron-left"></i> Longest Substring Without Repeating Characters
+    <a href="/2019/10/10/Palindrome-Number/" rel="prev" title="Palindrome-Number">
+      <i class="fa fa-chevron-left"></i> Palindrome-Number
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/07/31/Find-Median-Sorted-Arrays/" rel="next" title="Find Median Sorted Arrays">
-      Find Median Sorted Arrays <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
