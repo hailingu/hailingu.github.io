@@ -176,7 +176,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-06 17:26:21" itemprop="dateModified" datetime="2023-01-06T17:26:21+08:00">2023-01-06</time>
+                <time title="Modified: 2023-01-06 17:33:33" itemprop="dateModified" datetime="2023-01-06T17:33:33+08:00">2023-01-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -222,6 +222,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get -u github.com/gin-gonic/gin</span><br></pre></td></tr></table></figure>
 <p>完成上面两步就实现了 go mod 项目的创建，这个时候就可以在
 go_test_project 目录下直接写代码了。</p>
+<ol start="3" type="1">
+<li>创建第一个程序</li>
+</ol>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pacakge main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> fmt</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;Hello World!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>编译 main.go</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go build main.go</span><br></pre></td></tr></table></figure>
+<ol start="5" type="1">
+<li>运行程序</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./main</span><br></pre></td></tr></table></figure>
 
       
     </div>
