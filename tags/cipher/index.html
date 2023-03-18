@@ -20,23 +20,15 @@
     var CONFIG = {"hostname":"hailingu.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="leetcode 的第 9 题，考察简单数学。 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Palindrome Number">
-<meta property="og:url" content="http://hailingu.com/2019/10/10/Palindrome-Number/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Blog">
+<meta property="og:url" content="http://hailingu.com/tags/cipher/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="leetcode 的第 9 题，考察简单数学。 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-10-10T07:41:43.000Z">
-<meta property="article:modified_time" content="2022-11-03T17:49:15.747Z">
 <meta property="article:author" content="Hailin">
-<meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="math">
-<meta property="article:tag" content="palindromic">
-<meta property="article:tag" content="easy">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://hailingu.com/2019/10/10/Palindrome-Number/">
+<link rel="canonical" href="http://hailingu.com/tags/cipher/">
 
 
 <script id="page-configurations">
@@ -44,12 +36,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>Palindrome Number | Blog</title>
+  <title>Tag: cipher | Blog</title>
   
 
 
@@ -147,119 +139,51 @@
         <div class="content-wrap">
           
 
-          <div class="content post posts-expand">
+          <div class="content tag">
             
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/10/10/Palindrome-Number/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hailin">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Palindrome Number
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-10-10 15:41:43" itemprop="dateCreated datePublished" datetime="2019-10-10T15:41:43+08:00">2019-10-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-04 01:49:15" itemprop="dateModified" datetime="2022-11-04T01:49:15+08:00">2022-11-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">cipher
+          <small>Tag</small>
+        </h2>
+      </div>
 
       
-        <p>leetcode 的第 9 题，考察简单数学。</p>
-<pre><code>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</code></pre>
-<span id="more"></span>
-<p>题目的例子里给出了负数都不是回文数，剩下的就只需要考虑正整数了。回文数的特点就是从左向右读和从右向左读是一样的，即数字进行反转了之后会和原来的数相等的数即是回文数。而整数反转，在第
-7 题已经做过了。</p>
-<h3 id="复杂度分析">复杂度分析</h3>
-<ul>
-<li>时间复杂度：O(n)，因为一次遍历。</li>
-<li>空间复杂度：O(1)，无额外存储</li>
-<li>执行结果：
-<ul>
-<li>执行用时 : <strong>68 ms</strong>, 在所有 Python 提交中击败了
-<strong>54.33%</strong> 的用户</li>
-<li>内存消耗 : <strong>11.7 MB</strong>, 在所有 Python 提交中击败了
-<strong>29.21%</strong> 的用户</li>
-</ul></li>
-</ul>
-<h3 id="code">Code</h3>
-<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):</span><br><span class="line">    def isPalindrome(self, x):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type x: int</span><br><span class="line">        :rtype: bool</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        </span><br><span class="line">        if x &lt; 0:</span><br><span class="line">            return False</span><br><span class="line"></span><br><span class="line">        test = 0</span><br><span class="line">        origin = x</span><br><span class="line">        while x &gt; 0:</span><br><span class="line">            test = test * 10 + x % 10</span><br><span class="line">            x = x / 10</span><br><span class="line"></span><br><span class="line">        return test == origin</span><br></pre></td></tr></table></figure></code></pre>
-
+    <div class="collection-year">
+      <span class="collection-header">2023</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
-              <a href="/tags/math/" rel="tag"># math</a>
-              <a href="/tags/palindromic/" rel="tag"># palindromic</a>
-              <a href="/tags/easy/" rel="tag"># easy</a>
-          </div>
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2023-03-18T16:54:04+08:00"
+              content="2023-03-18">
+          03-18
+        </time>
+      </div>
 
-        
+      <div class="post-title">
+          <a class="post-title-link" href="/2023/03/18/Cipher-1/" itemprop="url">
+            <span itemprop="name">cipher 1</span>
+          </a>
+      </div>
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/" rel="prev" title="ML Toys Chapter 2 Naive Bayesian">
-      <i class="fa fa-chevron-left"></i> ML Toys Chapter 2 Naive Bayesian
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/11/04/Computational-Advertising-1-Preface/" rel="next" title="Computational Advertising 1 Preface">
-      Computational Advertising 1 Preface <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+    </header>
   </article>
+
+    </div>
+  </div>
   
   
+  
+
   
 
 
@@ -312,7 +236,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">复杂度分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
