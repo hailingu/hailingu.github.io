@@ -22,13 +22,13 @@
 
   <meta name="description" content="这部分是图解密码技术的的笔记。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cipher 1">
+<meta property="og:title" content="Cipher 1">
 <meta property="og:url" content="http://hailingu.com/2023/03/18/Cipher-1/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="这部分是图解密码技术的的笔记。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-18T08:54:04.000Z">
-<meta property="article:modified_time" content="2023-03-18T12:02:46.835Z">
+<meta property="article:modified_time" content="2023-03-19T11:25:23.075Z">
 <meta property="article:author" content="Hailin">
 <meta property="article:tag" content="cipher">
 <meta name="twitter:card" content="summary">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>cipher 1 | Blog</title>
+  <title>Cipher 1 | Blog</title>
   
 
 
@@ -164,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          cipher 1
+          Cipher 1
         </h1>
 
         <div class="post-meta">
@@ -173,10 +173,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-03-18 16:54:04 / Modified: 20:02:46" itemprop="dateCreated datePublished" datetime="2023-03-18T16:54:04+08:00">2023-03-18</time>
+              <time title="Created: 2023-03-18 16:54:04" itemprop="dateCreated datePublished" datetime="2023-03-18T16:54:04+08:00">2023-03-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-19 19:25:23" itemprop="dateModified" datetime="2023-03-19T19:25:23+08:00">2023-03-19</time>
+              </span>
 
           
 
@@ -192,7 +198,7 @@
         <p>这部分是<a
 target="_blank" rel="noopener" href="https://book.douban.com/subject/26822106/">图解密码技术的</a>的笔记。</p>
 <span id="more"></span>
-<h4 id="几个重要的名词">几个重要的名词</h4>
+<h3 id="几个重要的名词">几个重要的名词</h3>
 <ul>
 <li>发送者：发送信息的人或者设备</li>
 <li>接收者：接收信息的人或者设备</li>
@@ -202,6 +208,7 @@ target="_blank" rel="noopener" href="https://book.douban.com/subject/26822106/">
 <li>密文：加密过后得到的文字</li>
 <li>解密：将密文通过算法变回明文的过程</li>
 <li>密钥：加密过程中需要使用的一段符号，文字或者数字</li>
+<li>密钥空间：所有密钥组成的集合</li>
 <li>对称密码：加密和解密过程中使用的是同一个密钥</li>
 <li>非对称密码：加密和解密过程中使用的是不同的密钥</li>
 <li>单向散列函数：使用单向散列函数计算出来的一个数值。该方法只能保证信息的完整性，检测数据是否被篡改过。如
@@ -212,8 +219,8 @@ md5</li>
 <li>隐写术</li>
 <li>数字水印</li>
 </ul>
-<h4
-id="信息安全面临威胁的特性和相关解决技术">信息安全面临威胁的特性和相关解决技术</h4>
+<h3
+id="信息安全面临威胁的特性和相关解决技术">信息安全面临威胁的特性和相关解决技术</h3>
 <ul>
 <li>机密性
 <ul>
@@ -236,11 +243,11 @@ id="信息安全面临威胁的特性和相关解决技术">信息安全面临�
 <li>数字签名</li>
 </ul></li>
 </ul>
-<h4 id="信息安全常识">信息安全常识</h4>
+<h3 id="信息安全常识">信息安全常识</h3>
 <ul>
 <li>不要使用保密的密码算法
 <ul>
-<li>原因在于密码算法需要靠“保密”这个动作来保证安全，而这个动作恰恰是最不安全的</li>
+<li>密码算法若靠“保密”这个动作来保证安全，而这个动作恰恰是最不安全的</li>
 <li>密码算法的强弱无法通过数学严格证明，只能通过需要破解多少年这种现实中的动作来证明。如果一个密码需要很多年才能被破解，那么它的密码强度就高</li>
 </ul></li>
 <li>使用低强度的密码比不进行任何加密更危险
@@ -279,7 +286,10 @@ id="信息安全面临威胁的特性和相关解决技术">信息安全面临�
     <a href="/2023/03/15/Computational-Advertising-2-Introduction-to-Online-Advertising/" rel="prev" title="Computational Advertising 2 Introduction to Online Advertising">
       <i class="fa fa-chevron-left"></i> Computational Advertising 2 Introduction to Online Advertising
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/03/19/Cipher-2/" rel="next" title="Cipher 2">
+      Cipher 2 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -338,7 +348,7 @@ id="信息安全面临威胁的特性和相关解决技术">信息安全面临�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%A0%E4%B8%AA%E9%87%8D%E8%A6%81%E7%9A%84%E5%90%8D%E8%AF%8D"><span class="nav-number">1.</span> <span class="nav-text">几个重要的名词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E9%9D%A2%E4%B8%B4%E5%A8%81%E8%83%81%E7%9A%84%E7%89%B9%E6%80%A7%E5%92%8C%E7%9B%B8%E5%85%B3%E8%A7%A3%E5%86%B3%E6%8A%80%E6%9C%AF"><span class="nav-number">2.</span> <span class="nav-text">信息安全面临威胁的特性和相关解决技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%B8%B8%E8%AF%86"><span class="nav-number">3.</span> <span class="nav-text">信息安全常识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0%E6%B5%8B%E8%AF%95"><span class="nav-number">4.</span> <span class="nav-text">练习测试</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%B8%AA%E9%87%8D%E8%A6%81%E7%9A%84%E5%90%8D%E8%AF%8D"><span class="nav-number">1.</span> <span class="nav-text">几个重要的名词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E9%9D%A2%E4%B8%B4%E5%A8%81%E8%83%81%E7%9A%84%E7%89%B9%E6%80%A7%E5%92%8C%E7%9B%B8%E5%85%B3%E8%A7%A3%E5%86%B3%E6%8A%80%E6%9C%AF"><span class="nav-number">2.</span> <span class="nav-text">信息安全面临威胁的特性和相关解决技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%B8%B8%E8%AF%86"><span class="nav-number">3.</span> <span class="nav-text">信息安全常识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0%E6%B5%8B%E8%AF%95"><span class="nav-number">3.1.</span> <span class="nav-text">练习测试</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -352,7 +362,7 @@ id="信息安全面临威胁的特性和相关解决技术">信息安全面临�
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -361,7 +371,7 @@ id="信息安全面临威胁的特性和相关解决技术">信息安全面临�
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">24</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>

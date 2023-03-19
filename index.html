@@ -145,6 +145,75 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2023/03/19/Cipher-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hailin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/19/Cipher-2/" class="post-title-link" itemprop="url">Cipher 2</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-03-19 10:06:14 / Modified: 19:27:21" itemprop="dateCreated datePublished" datetime="2023-03-19T10:06:14+08:00">2023-03-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="凯撒密码平移密码">凯撒密码（平移密码）</h3>
+<p>凯撒密码就是将字母表里的字母按顺序平移一定的位数。例如 a 平移 3
+位就变成了 d，以此类推可以得到下面这张码表</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a b c d e f g h i j k l m n o p q r s t u v w x y z</span><br><span class="line">d e f g h i j k l m n o p q r s t u v w x y z a b c</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/19/Cipher-2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://hailingu.com/2023/03/18/Cipher-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -159,7 +228,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/03/18/Cipher-1/" class="post-title-link" itemprop="url">cipher 1</a>
+            <a href="/2023/03/18/Cipher-1/" class="post-title-link" itemprop="url">Cipher 1</a>
         </h2>
 
         <div class="post-meta">
@@ -168,10 +237,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-03-18 16:54:04 / Modified: 20:02:46" itemprop="dateCreated datePublished" datetime="2023-03-18T16:54:04+08:00">2023-03-18</time>
+              <time title="Created: 2023-03-18 16:54:04" itemprop="dateCreated datePublished" datetime="2023-03-18T16:54:04+08:00">2023-03-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-19 19:25:23" itemprop="dateModified" datetime="2023-03-19T19:25:23+08:00">2023-03-19</time>
+              </span>
 
           
 
@@ -566,7 +641,7 @@ target="_blank" rel="noopener" href="https://book.douban.com/subject/34804492/">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-04 01:31:24" itemprop="dateModified" datetime="2022-11-04T01:31:24+08:00">2022-11-04</time>
+                <time title="Modified: 2023-03-19 19:25:23" itemprop="dateModified" datetime="2023-03-19T19:25:23+08:00">2023-03-19</time>
               </span>
 
           
@@ -582,6 +657,12 @@ target="_blank" rel="noopener" href="https://book.douban.com/subject/34804492/">
       
           <h3 id="所谓理论">所谓理论</h3>
 <p>朴素贝叶斯基于一个定理，和一个假设。定理即贝叶斯定理，假设呢就是各个特征条件独立，这个假设也是朴素贝叶斯名字里含有“朴素”俩字的原因。回顾一下贝叶斯定理：</p>
+<p><span class="math display">\[
+\begin{split}
+&amp; P(a|b)=\frac{P(b|a)P(a)}{P(b)} \\
+&amp; \text{subject to } P(b) \neq 0
+\end{split}
+\]</span></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/#more" rel="contents">
@@ -866,88 +947,6 @@ target="_blank" rel="noopener" href="https://book.douban.com/subject/34804492/">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/08/02/Longest-Palindromic-Substring/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hailin">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/08/02/Longest-Palindromic-Substring/" class="post-title-link" itemprop="url">Longest Palindromic Substring</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-08-02 10:54:09" itemprop="dateCreated datePublished" datetime="2019-08-02T10:54:09+08:00">2019-08-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-04 00:16:02" itemprop="dateModified" datetime="2022-11-04T00:16:02+08:00">2022-11-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>leetcode 的第 5 题，考察数组的数组的遍历。</p>
-<pre><code>给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。</code></pre>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/08/02/Longest-Palindromic-Substring/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1017,7 +1016,7 @@ target="_blank" rel="noopener" href="https://book.douban.com/subject/34804492/">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1026,7 +1025,7 @@ target="_blank" rel="noopener" href="https://book.douban.com/subject/34804492/">
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">24</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
