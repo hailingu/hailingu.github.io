@@ -28,7 +28,7 @@
 <meta property="og:description" content="对称密码 一串比特序列 A（0 1 0 1 1 1 0 1）和另一串比特序列 B（1 1 0 0 0 1 0 1）经过两次 xor 操作后会有 $ A B B &#x3D; A$ \[ 0 1 0 1 1 1 0 1 \bigoplus 1 1 0 0 0 1 0 1 &#x3D; 1 0 0 1 1 0 0 0 \] \[ 1 0 0 1 1 0 0 0 \bigoplus 1 1 0 0 0 1 0 1 &#x3D; 0">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-20T15:17:48.000Z">
-<meta property="article:modified_time" content="2023-03-20T17:52:32.678Z">
+<meta property="article:modified_time" content="2023-03-21T15:24:14.047Z">
 <meta property="article:author" content="Hailin">
 <meta property="article:tag" content="cipher">
 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-21 01:52:32" itemprop="dateModified" datetime="2023-03-21T01:52:32+08:00">2023-03-21</time>
+                <time title="Modified: 2023-03-21 23:24:14" itemprop="dateModified" datetime="2023-03-21T23:24:14+08:00">2023-03-21</time>
               </span>
 
           
@@ -287,10 +287,63 @@ class="math inline">\(R_n\)</span> 作为下一轮输入</li>
 <p>其实 DES
 的加密和解密过程是完全对称的，加密就是解密，解密也是加密，这也是 DES
 的精妙之处。</p>
+<h3 id="aes">AES</h3>
+<p>AES 也是一种分组加密密码，密钥长度有 128，160， 192， 224， 256
+这几个选项。标准 AES 的分组长度为 128，迷药长度可以选择 128， 192， 256
+这 3 个选项</p>
+<p>加密过程</p>
+<ol type="1">
+<li>先将 0 到 255 中的 256 个整数打乱，生成一张替换表 S-Box</li>
+<li>对于待加密的信息的每一个字节，查找其表示的数字在 S-Box
+里面对应的值。例如待加密的消息为 “abc”，那么对于字符 “a”，其对应的数字为
+97，然后找到 97 在 S-Box 里的值，比如说为 42，那么就将 "a" 替换成
+"*"；字符“bc”的做法同“a”</li>
+<li>将步骤 2 中得到的信息，以 4 个字节为一组做 ShiftRows
+操作。例如加密后的字符串为 "abcd1234"，这里就分成 2
+组："abcd"，“1234”。经过 ShiftRows 操作后 "abcd" -&gt; "bcda"，"1234"
+-&gt; "3412"</li>
+<li>将步骤 3 中得到的结果，组成一个 <span class="math inline">\(4 \times
+n\)</span> 的矩阵，步骤 3 中得到的字符串长度如果为 <span
+class="math inline">\(l\)</span>，那么 <span class="math inline">\(n =
+\lceil l / 4 \rceil\)</span>。将得到的这个矩阵 <span
+class="math inline">\(M\)</span>， 乘以另一个矩阵 <span
+class="math inline">\(T(n,n)\)</span>，得到这一步的输出 <span
+class="math inline">\(R=M \cdot T\)</span></li>
+<li>将步骤 4 中的 <span class="math inline">\(R\)</span> 矩阵与密钥进行
+xor 操作得到最后的输出。</li>
+<li>重复 1 - 5 步骤 10 到 14 轮。</li>
+</ol>
+<p>可以发现 AES 的过程通过每一个步骤逆运算就可以解密了。</p>
+<h3 id="加密算法的选择">加密算法的选择</h3>
+<ol type="1">
+<li>不选 DES</li>
+<li>不选三重 DES</li>
+<li>选 AES</li>
+</ol>
 <h3 id="练习测试">练习测试</h3>
 <ol type="1">
 <li><p>相当于 +3 后再取模</p></li>
 <li><p>个人认为 Alice 是对的，不同意书上的解答。</p></li>
+<li><p>当前设定下，20 年的时间能遍历的密钥空间</p></li>
+</ol>
+<p><span class="math display">\[ 10^{20} \times 10^{100} \times 10^{20}
+\times 365 \times 24 \times 3600 &lt; 10^{140} \times 365 \times 24
+\times 3600 \]</span></p>
+<p>其中</p>
+<p><span class="math display">\[365 &lt; 400 = 4 \times
+10^2\]</span></p>
+<p><span class="math display">\[24 &lt; 4 \times 10 \]</span></p>
+<p><span class="math display">\[3600 &lt; 4 \times 10^3 \]</span></p>
+<p>就有</p>
+<p><span class="math display">\[ 10^{20} \times 10^{100} \times 10^{20}
+\times 365 \times 24 \times 3600 &lt; 10^{140} \times 4^3 \times 10^6
+\]</span></p>
+<p><span class="math display">\[ 10^{140} \times 4^3 \times 10^6 =
+10^{146} \times 4^3 &lt; (2^{3.3})^{146}\times 2 ^ 6 &lt; 2^{482 + 6} =
+2^{488}\]</span></p>
+<p>故 512 比特足够用了</p>
+<ol start="4" type="1">
+<li>o x x x o o</li>
 </ol>
 
     </div>
@@ -372,7 +425,7 @@ class="math inline">\(R_n\)</span> 作为下一轮输入</li>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">对称密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E6%AC%A1%E6%80%A7%E5%AF%86%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">一次性密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#des"><span class="nav-number">3.</span> <span class="nav-text">DES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E9%87%8D-des"><span class="nav-number">4.</span> <span class="nav-text">三重 DES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0%E6%B5%8B%E8%AF%95"><span class="nav-number">5.</span> <span class="nav-text">练习测试</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">对称密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E6%AC%A1%E6%80%A7%E5%AF%86%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">一次性密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#des"><span class="nav-number">3.</span> <span class="nav-text">DES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E9%87%8D-des"><span class="nav-number">4.</span> <span class="nav-text">三重 DES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#aes"><span class="nav-number">5.</span> <span class="nav-text">AES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">6.</span> <span class="nav-text">加密算法的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0%E6%B5%8B%E8%AF%95"><span class="nav-number">7.</span> <span class="nav-text">练习测试</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
