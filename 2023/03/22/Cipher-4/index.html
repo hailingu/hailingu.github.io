@@ -20,23 +20,20 @@
     var CONFIG = {"hostname":"hailingu.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="leetcode 的第 6 题，考察数组的数组的遍历。 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。  比如输入字符串为 &quot;LEETCODEISHIRING&quot; 行数为 3 时，排列如下：          L   C   I   R     E T O E S I I G     E   D   H   N">
+  <meta name="description" content="分组密码模式  分组密码：每次只能处理特定长度的明文的密码算法，这里的一段长度的明文就称之为分组 模式：如果一段明文很长，需要迭代很多次才能加密，迭代的方法就是模式 ECB：将明文切成很多块，每一块独立的加密 流密码：能连续处理明文的密码算法。流密码一般以 1 比特，8 比特或 32 比特等单位进行加密和解密 密文分组：是指将明文分组加密后的结果。明文分组就是将明文切成很多块中的一块。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ZigZag Conversion">
-<meta property="og:url" content="http://hailingu.com/2019/08/02/ZigZag-Conversion/index.html">
+<meta property="og:title" content="Cipher 4">
+<meta property="og:url" content="http://hailingu.com/2023/03/22/Cipher-4/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="leetcode 的第 6 题，考察数组的数组的遍历。 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。  比如输入字符串为 &quot;LEETCODEISHIRING&quot; 行数为 3 时，排列如下：          L   C   I   R     E T O E S I I G     E   D   H   N">
+<meta property="og:description" content="分组密码模式  分组密码：每次只能处理特定长度的明文的密码算法，这里的一段长度的明文就称之为分组 模式：如果一段明文很长，需要迭代很多次才能加密，迭代的方法就是模式 ECB：将明文切成很多块，每一块独立的加密 流密码：能连续处理明文的密码算法。流密码一般以 1 比特，8 比特或 32 比特等单位进行加密和解密 密文分组：是指将明文分组加密后的结果。明文分组就是将明文切成很多块中的一块。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-08-02T07:17:35.000Z">
-<meta property="article:modified_time" content="2022-11-03T16:16:02.875Z">
+<meta property="article:published_time" content="2023-03-22T13:08:27.000Z">
+<meta property="article:modified_time" content="2023-03-22T16:57:55.200Z">
 <meta property="article:author" content="Hailin">
-<meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="math">
-<meta property="article:tag" content="medium">
-<meta property="article:tag" content="array">
+<meta property="article:tag" content="cipher">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://hailingu.com/2019/08/02/ZigZag-Conversion/">
+<link rel="canonical" href="http://hailingu.com/2023/03/22/Cipher-4/">
 
 
 <script id="page-configurations">
@@ -49,7 +46,7 @@
   };
 </script>
 
-  <title>ZigZag Conversion | Blog</title>
+  <title>Cipher 4 | Blog</title>
   
 
 
@@ -154,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/08/02/ZigZag-Conversion/">
+    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2023/03/22/Cipher-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -167,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ZigZag Conversion
+          Cipher 4
         </h1>
 
         <div class="post-meta">
@@ -177,24 +174,15 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2019-08-02 15:17:35" itemprop="dateCreated datePublished" datetime="2019-08-02T15:17:35+08:00">2019-08-02</time>
+              <time title="Created: 2023-03-22 21:08:27" itemprop="dateCreated datePublished" datetime="2023-03-22T21:08:27+08:00">2023-03-22</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-04 00:16:02" itemprop="dateModified" datetime="2022-11-04T00:16:02+08:00">2022-11-04</time>
+                <time title="Modified: 2023-03-23 00:57:55" itemprop="dateModified" datetime="2023-03-23T00:57:55+08:00">2023-03-23</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
-                </span>
-            </span>
 
           
 
@@ -207,44 +195,105 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>leetcode 的第 6 题，考察数组的数组的遍历。</p>
-<pre><code>将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
-
-比如输入字符串为 &quot;LEETCODEISHIRING&quot; 行数为 3 时，排列如下：
-    
-    L   C   I   R
-    E T O E S I I G
-    E   D   H   N</code></pre>
-<span id="more"></span>
-<p>简单做一下计算，在给定行数为 numRows
-的情况下，第一行元素的下标分别为，设 step = 2 * numRows - 2：</p>
-<pre><code>Idx[0], Idx[0 + step], Idx[0 + step + step]...</code></pre>
-<p>第二行元素的下标为，设 l 为行号（此时 l = 1），step1 = step - 2 * l，
-step2 = step - step1：</p>
-<pre><code>Idx[0 + l], Idx[0 + l + step1], Idx[0 + l + step1 + step2], Idx[0 + l + step + step1],  Idx[0 + l + 2*step]...</code></pre>
-<p>第三行元素的下标为，（此时 l = 2）：</p>
-<pre><code>Idx[0 + l], Idx[0 + l + step1], Idx[0 + l + step1 + step2], Idx[0 + l + step + step1],  Idx[0 + l + step1 + step2 + step1 + step2]...</code></pre>
-<p>直到最后一行：</p>
-<pre><code>Idx[0] + n - 1, Idx[1] = Idx[0] + step, Idx[2] = Idx[1] + 1 * step, ...</code></pre>
-<p>注意到 step = step1 + step2，即有 0 + l + step1 = 0 + l + step - 2 *
-l = step - l，所以在第 2 行到 n-2 行的下标可以修改为：</p>
-<pre><code>Idx[0 + l], Idx[0 + step - l], Idx[0 + step], Idx[0 + 2*step - l] ...</code></pre>
-<p>有一些特殊情况直接返回字符串即可，即 n = 1 或者 n
-大于字符串长度的时候。</p>
-<h3 id="复杂度分析">复杂度分析</h3>
+        <h3 id="分组密码模式">分组密码模式</h3>
 <ul>
-<li>时间复杂度：O(n)，因为一次遍历。</li>
-<li>空间复杂度：O(1)，没有额外存储。</li>
-<li>执行结果：
-<ul>
-<li>执行用时 : <strong>48 ms</strong>, 在所有 Python 提交中击败了
-<strong>84.40%</strong> 的用户</li>
-<li>内存消耗 : <strong>11.7 MB</strong>, 在所有 Python 提交中击败了
-<strong>46.04%</strong> 的用户</li>
-</ul></li>
+<li>分组密码：每次只能处理特定长度的明文的密码算法，这里的一段长度的明文就称之为分组</li>
+<li>模式：如果一段明文很长，需要迭代很多次才能加密，迭代的方法就是模式</li>
+<li>ECB：将明文切成很多块，每一块独立的加密</li>
+<li>流密码：能连续处理明文的密码算法。流密码一般以 1 比特，8 比特或 32
+比特等单位进行加密和解密</li>
+<li>密文分组：是指将明文分组加密后的结果。明文分组就是将明文切成很多块中的一块。</li>
 </ul>
-<h3 id="code">Code</h3>
-<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):</span><br><span class="line">    def convert(self, s, numRows):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type s: str</span><br><span class="line">        :type numRows: int</span><br><span class="line">        :rtype: str</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        l = len(s)</span><br><span class="line">        if numRows &lt;= 1 or (numRows &gt;= l):</span><br><span class="line">            return s</span><br><span class="line"></span><br><span class="line">        ans = &#x27;&#x27;</span><br><span class="line">        step = 2 * numRows - 2</span><br><span class="line"></span><br><span class="line">        for i in range(numRows):</span><br><span class="line">            j = 0</span><br><span class="line">            while j + i &lt; l:</span><br><span class="line">                ans += s[j + i]</span><br><span class="line">                if i != 0 and i != numRows - 1 and j + step - i &lt; l:</span><br><span class="line">                    ans += s[j + step - i]</span><br><span class="line"></span><br><span class="line">                j += step</span><br><span class="line">        return ans  </span><br></pre></td></tr></table></figure></code></pre>
+<span id="more"></span>
+<h3 id="ecb-模式">ECB 模式</h3>
+<p>示例如下，将明文切成很多块，分别加密后，将密文分组按顺序拼起来就是最终的加密结果</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">明文分组 1 -&gt; 加密 -&gt; 密文分组 1</span><br><span class="line">明文分组 2 -&gt; 加密 -&gt; 密文分组 2</span><br><span class="line">明文分组 3 -&gt; 加密 -&gt; 密文分组 3</span><br><span class="line">明文分组 4 -&gt; 加密 -&gt; 密文分组 4</span><br><span class="line">明文分组 5 -&gt; 加密 -&gt; 密文分组 5</span><br><span class="line">明文分组 6 -&gt; 加密 -&gt; 密文分组 6</span><br><span class="line">明文分组 7 -&gt; 加密 -&gt; 密文分组 7</span><br></pre></td></tr></table></figure>
+<p>这个方案下存在很大的危险，在波需要破译密码的情况下，操作密文分组可以视为对明文分组的操作，比如调换顺序，替换，复制，都会对最终的结果造成影响。</p>
+<h3 id="cbc-模式">CBC 模式</h3>
+<ol type="1">
+<li>初始化向量 V</li>
+<li>明文分组 1 与向量 V 执行操作，<span class="math inline">\(m_1
+\bigoplus V\)</span>，得到 <span
+class="math inline">\(m_1V\)</span>，对其加密得到 <span
+class="math inline">\(Enc(m_1V)\)</span></li>
+<li>明文分组 2 与 <span class="math inline">\(Enc(m_1V)\)</span>
+执行操作，<span class="math inline">\(m_2 \bigoplus
+Enc(m_1V)\)</span>，得到 <span
+class="math inline">\(m_2V\)</span>，对其加密得到 <span
+class="math inline">\(Enc(m_2V)\)</span></li>
+<li>重复步骤 2、3 直到全部明文加密</li>
+</ol>
+<p>解密的过程就是反过来操作，和前面提过的 DES、AES
+的解密方式一模一样，这个方案的弱点在于数据不能丢失，如果最终的数据在传输过程中错了
+1 比特位或者丢失了 1
+比特位，会导致出错的比特位之前的密文分组无法解密。</p>
+<p><strong>填充提示攻击</strong>，因为分组密码的特性，如果待加密的明文不是分组的整数倍的时候，就需要在尾部填充内容构成分组的整数倍。这个时候攻击者可以利用填充的部分更改部分，这样在解密的时候会得到错误信息，根据错误信息和明文，就能得到一部分明文相关的信息。</p>
+<p>CTS 模式：该模式是在 CBC
+模式下，如果最后一个明文分组不够长度，那么使用上一个密文分组尾部的部分填充到明文中，再进行加密，这里用到了
+xor 的性质。</p>
+<h3 id="cfb-模式">CFB 模式</h3>
+<ol type="1">
+<li>初始化向量 V</li>
+<li>加密向量 V 得到 <span class="math inline">\(Enc(V)\)</span></li>
+<li>明文分组 1 与向量 <span class="math inline">\(Enc(V)\)</span>
+执行操作，<span class="math inline">\(m_1 \bigoplus
+Enc(V)\)</span>，得到 <span
+class="math inline">\(m_1Enc(V)\)</span></li>
+<li>将 <span class="math inline">\(m_1Enc(V)\)</span> 加密得到 <span
+class="math inline">\(Enc(m_1Enc(V))\)</span></li>
+<li>明文分组 2 与 <span class="math inline">\(Enc(m_1Enc(V))\)</span>
+执行操作，<span class="math inline">\(m_2 \bigoplus
+Enc(m_1Enc(V))\)</span>，得到 <span
+class="math inline">\(m_2Enc(m_1Enc(V))\)</span></li>
+<li>重复步骤 2、3、4、5 直到全部明文分组加密</li>
+</ol>
+<p>CFB 模式的解密和之前的 DES、AES
+稍有不同，也非常类似。比如要解密最后一个分组 <span
+class="math inline">\(N\)</span>，那么需要加密分组 <span
+class="math inline">\(N-1\)</span>，将加密结果与密文分组 N 做 xor
+操作即可得到明文。</p>
+<p><strong>重放攻击</strong>，即使用之前收到的密文分组替换新的密文分组发送给接收者，接收者会得到过去的旧信息，无法解密的部分和能正确解密的第一个密文分组。</p>
+<h3 id="ofb-模式">OFB 模式</h3>
+<ol type="1">
+<li>初始化向量 V</li>
+<li>加密向量 V 得到 $Enc(V) $</li>
+<li>明文分组 1 与向量 <span class="math inline">\(Enc(V)\)</span>
+执行操作，<span class="math inline">\(m_1 \bigoplus
+Enc(V)\)</span>，得到 <span
+class="math inline">\(m_1Enc(V)\)</span></li>
+<li>将 <span class="math inline">\(Enc(V)\)</span> 加密得到 <span
+class="math inline">\(Enc(Enc(V))\)</span></li>
+<li>明文分组 2 与 <span class="math inline">\(Enc(Enc(V))\)</span>
+执行操作，<span class="math inline">\(m_2 \bigoplus
+Enc(Enc(V))\)</span>，得到 <span
+class="math inline">\(m_2Enc(Enc(V))\)</span></li>
+<li>将 <span class="math inline">\(Enc(Enc(V))\)</span> 加密得到 <span
+class="math inline">\(Enc(Enc(Enc(V)))\)</span></li>
+<li>重复步骤 3、4、5、6 直到全部明文分组加密</li>
+</ol>
+<h3 id="ctr-模式">CTR 模式</h3>
+<ol type="1">
+<li>初始化比特序列 V</li>
+<li>加密 V 得到 <span class="math inline">\(Enc(V)\)</span></li>
+<li>明文分组 1 与向量 <span class="math inline">\(Enc(V)\)</span>
+执行操作，<span class="math inline">\(m_1 \bigoplus
+Enc(V)\)</span>，得到 <span
+class="math inline">\(m_1Enc(V)\)</span></li>
+<li>V + 1</li>
+<li>重复步骤 2、3、4 直到所有明文分组全部加密</li>
+</ol>
+<p>这个方法的优点是可以并行加密。</p>
+<h3 id="练习测试">练习测试</h3>
+<ol type="1">
+<li>16 字节</li>
+<li>用用户名的密文分组覆盖密码的密文分组，这样只需要知道用户名就可以登陆了。而用户名的明文几乎很容易拿到</li>
+<li>初始化相同的向量，那么可以通过密文一样，判断出密文对应的明文是一样的。</li>
+<li>这个修改相当于将 CBC 模式改成了 ECB
+模式，除了第一个密文分组外，后面的密文分组和明文分组，可以直接获得对应关系</li>
+<li>这里的加密算法就是 xor，不过用于加密的 xor
+密钥是按照一定的规律生成的</li>
+<li>o x o o</li>
+</ol>
 
     </div>
 
@@ -254,10 +303,7 @@ l = step - l，所以在第 2 行到 n-2 行的下标可以修改为：</p>
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
-              <a href="/tags/math/" rel="tag"># math</a>
-              <a href="/tags/medium/" rel="tag"># medium</a>
-              <a href="/tags/array/" rel="tag"># array</a>
+              <a href="/tags/cipher/" rel="tag"># cipher</a>
           </div>
 
         
@@ -266,13 +312,10 @@ l = step - l，所以在第 2 行到 n-2 行的下标可以修改为：</p>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/08/02/Longest-Palindromic-Substring/" rel="prev" title="Longest Palindromic Substring">
-      <i class="fa fa-chevron-left"></i> Longest Palindromic Substring
+    <a href="/2023/03/20/Cipher-3/" rel="prev" title="Cipher 3">
+      <i class="fa fa-chevron-left"></i> Cipher 3
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/10/09/Reverse-Integer/" rel="next" title="Reverse Integer">
-      Reverse Integer <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -331,7 +374,7 @@ l = step - l，所以在第 2 行到 n-2 行的下标可以修改为：</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">复杂度分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">分组密码模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ecb-%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">ECB 模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cbc-%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">CBC 模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cfb-%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">CFB 模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ofb-%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">OFB 模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ctr-%E6%A8%A1%E5%BC%8F"><span class="nav-number">6.</span> <span class="nav-text">CTR 模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0%E6%B5%8B%E8%AF%95"><span class="nav-number">7.</span> <span class="nav-text">练习测试</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
