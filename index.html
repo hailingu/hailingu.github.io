@@ -145,6 +145,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2023/03/23/Cipher-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hailin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/23/Cipher-5/" class="post-title-link" itemprop="url">Cipher 5</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-23 20:52:26" itemprop="dateCreated datePublished" datetime="2023-03-23T20:52:26+08:00">2023-03-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-24 00:14:57" itemprop="dateModified" datetime="2023-03-24T00:14:57+08:00">2023-03-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="密钥配送问题">密钥配送问题</h3>
+<p>在使用对称加密的时候，加密方需要向解密方配送密钥，如何安全的传输密钥，就是密钥配送问题。解决这个问题的办法有以下几种</p>
+<ul>
+<li>事先共享密钥解决：实际中不可行</li>
+<li>密钥分配中心解决：密钥分配中心可能成为攻击目标，攻击成功了之后会导致基于该方式的通信完全无法进行</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 密钥中心生成临时密钥</span><br><span class="line">2. 密钥中心用 Alice 的密钥加密临时密钥，把临时密钥传递给 Alice，Alice 用自己的密钥解密获得临时密钥。Bob 以同样的方式获得临时密钥</span><br><span class="line">3. 双方用临时密钥加密小心进行通信</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Diffie-Hellman 密钥交换解决</li>
+<li>公钥密码解决：使用公钥加密，使用解密密钥解密。公钥对所有人公开，但是解密密钥是私有的，只有拥有解密密钥才能解密</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/23/Cipher-5/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://hailingu.com/2023/03/22/Cipher-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -854,98 +936,6 @@ target="_blank" rel="noopener" href="https://book.douban.com/subject/34804492/">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/10/09/String-to-Integer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hailin">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/10/09/String-to-Integer/" class="post-title-link" itemprop="url">String to Integer</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-10-09 13:59:15" itemprop="dateCreated datePublished" datetime="2019-10-09T13:59:15+08:00">2019-10-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-04 00:16:02" itemprop="dateModified" datetime="2022-11-04T00:16:02+08:00">2022-11-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>leetcode 的第 8 题，考察字符串和数学。</p>
-<pre><code>请你来实现一个 atoi 函数，使其能将字符串转换成整数。
-
-首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。
-
-当我们寻找到的第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字组合起来，作为该整数的正负号；假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成整数。
-
-该字符串除了有效的整数部分之后也可能会存在多余的字符，这些字符可以被忽略，它们对于函数不应该造成影响。
-
-注意：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换。
-
-在任何情况下，若函数不能进行有效的转换时，请返回 0。</code></pre>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/10/09/String-to-Integer/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1015,7 +1005,7 @@ target="_blank" rel="noopener" href="https://book.douban.com/subject/34804492/">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

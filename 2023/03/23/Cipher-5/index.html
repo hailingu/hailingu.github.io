@@ -20,23 +20,20 @@
     var CONFIG = {"hostname":"hailingu.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="leetcode 的第 8 题，考察字符串和数学。 请你来实现一个 atoi 函数，使其能将字符串转换成整数。  首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。  当我们寻找到的第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字组合起来，作为该整数的正负号；假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成整数。  该字符串除了">
+  <meta name="description" content="密钥配送问题 在使用对称加密的时候，加密方需要向解密方配送密钥，如何安全的传输密钥，就是密钥配送问题。解决这个问题的办法有以下几种  事先共享密钥解决：实际中不可行 密钥分配中心解决：密钥分配中心可能成为攻击目标，攻击成功了之后会导致基于该方式的通信完全无法进行  1231. 密钥中心生成临时密钥2. 密钥中心用 Alice 的密钥加密临时密钥，把临时密钥传递给 Alice，Alice 用自己的密">
 <meta property="og:type" content="article">
-<meta property="og:title" content="String to Integer">
-<meta property="og:url" content="http://hailingu.com/2019/10/09/String-to-Integer/index.html">
+<meta property="og:title" content="Cipher 5">
+<meta property="og:url" content="http://hailingu.com/2023/03/23/Cipher-5/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="leetcode 的第 8 题，考察字符串和数学。 请你来实现一个 atoi 函数，使其能将字符串转换成整数。  首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。  当我们寻找到的第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字组合起来，作为该整数的正负号；假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成整数。  该字符串除了">
+<meta property="og:description" content="密钥配送问题 在使用对称加密的时候，加密方需要向解密方配送密钥，如何安全的传输密钥，就是密钥配送问题。解决这个问题的办法有以下几种  事先共享密钥解决：实际中不可行 密钥分配中心解决：密钥分配中心可能成为攻击目标，攻击成功了之后会导致基于该方式的通信完全无法进行  1231. 密钥中心生成临时密钥2. 密钥中心用 Alice 的密钥加密临时密钥，把临时密钥传递给 Alice，Alice 用自己的密">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-10-09T05:59:15.000Z">
-<meta property="article:modified_time" content="2022-11-03T16:16:02.874Z">
+<meta property="article:published_time" content="2023-03-23T12:52:26.000Z">
+<meta property="article:modified_time" content="2023-03-23T16:14:57.335Z">
 <meta property="article:author" content="Hailin">
-<meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="math">
-<meta property="article:tag" content="medium">
-<meta property="article:tag" content="string">
+<meta property="article:tag" content="cipher">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://hailingu.com/2019/10/09/String-to-Integer/">
+<link rel="canonical" href="http://hailingu.com/2023/03/23/Cipher-5/">
 
 
 <script id="page-configurations">
@@ -49,7 +46,7 @@
   };
 </script>
 
-  <title>String to Integer | Blog</title>
+  <title>Cipher 5 | Blog</title>
   
 
 
@@ -154,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/10/09/String-to-Integer/">
+    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2023/03/23/Cipher-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -167,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          String to Integer
+          Cipher 5
         </h1>
 
         <div class="post-meta">
@@ -177,24 +174,15 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2019-10-09 13:59:15" itemprop="dateCreated datePublished" datetime="2019-10-09T13:59:15+08:00">2019-10-09</time>
+              <time title="Created: 2023-03-23 20:52:26" itemprop="dateCreated datePublished" datetime="2023-03-23T20:52:26+08:00">2023-03-23</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-04 00:16:02" itemprop="dateModified" datetime="2022-11-04T00:16:02+08:00">2022-11-04</time>
+                <time title="Modified: 2023-03-24 00:14:57" itemprop="dateModified" datetime="2023-03-24T00:14:57+08:00">2023-03-24</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
-                </span>
-            </span>
 
           
 
@@ -207,49 +195,67 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>leetcode 的第 8 题，考察字符串和数学。</p>
-<pre><code>请你来实现一个 atoi 函数，使其能将字符串转换成整数。
-
-首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。
-
-当我们寻找到的第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字组合起来，作为该整数的正负号；假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成整数。
-
-该字符串除了有效的整数部分之后也可能会存在多余的字符，这些字符可以被忽略，它们对于函数不应该造成影响。
-
-注意：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换。
-
-在任何情况下，若函数不能进行有效的转换时，请返回 0。</code></pre>
-<span id="more"></span>
-<p>其实这题毫意义，测试用例里故意弄了很多奇奇怪怪的输入，稍微正常点的人都不会把
-"4193 with words" 用于作为输入，并将其输出为
-4193。所以在这个毫无意义的题目里，直接实用正则匹配第一个数字串，并将其转换成数字输出即可。</p>
-<p>简要叙述下思路，对输入字符串做一下预处理，去掉头部的空格，可以用 str
-= str.strip() 完成，然后使用 re.search("<a href="#fn1"
-class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>?[0-9]+", str)
-获取匹配到的合法的字符串，最后用 int() 函数转换。</p>
-<h3 id="复杂度分析">复杂度分析</h3>
-<p>由于都是调用
-API，并且正则匹配的复杂度较难给出，所以不进行分析了。</p>
+        <h3 id="密钥配送问题">密钥配送问题</h3>
+<p>在使用对称加密的时候，加密方需要向解密方配送密钥，如何安全的传输密钥，就是密钥配送问题。解决这个问题的办法有以下几种</p>
 <ul>
-<li>执行结果：
-<ul>
-<li>执行用时 : <strong>36 ms</strong>, 在所有 Python 提交中击败了
-<strong>37.07%</strong> 的用户</li>
-<li>内存消耗 : <strong>11.7 MB</strong>, 在所有 Python 提交中击败了
-<strong>28.20%</strong> 的用户</li>
-</ul></li>
+<li>事先共享密钥解决：实际中不可行</li>
+<li>密钥分配中心解决：密钥分配中心可能成为攻击目标，攻击成功了之后会导致基于该方式的通信完全无法进行</li>
 </ul>
-<h3 id="code">Code</h3>
-<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):</span><br><span class="line">    def myAtoi(self, str):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type str: str</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        </span><br><span class="line">        str = str.strip()</span><br><span class="line">        matched = re.search(&quot;^[+-]?[0-9]+&quot;, str)</span><br><span class="line">        ans = 0</span><br><span class="line">        if matched is not None:</span><br><span class="line">            ans = int(matched.group())</span><br><span class="line">            </span><br><span class="line">        ans = -2147483648 if ans &lt; -2147483648 else ans</span><br><span class="line">        ans = 2147483647 if ans &gt; 2147483647 else ans</span><br><span class="line">            </span><br><span class="line">        return ans</span><br></pre></td></tr></table></figure></code></pre>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>+-<a href="#fnref1" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 密钥中心生成临时密钥</span><br><span class="line">2. 密钥中心用 Alice 的密钥加密临时密钥，把临时密钥传递给 Alice，Alice 用自己的密钥解密获得临时密钥。Bob 以同样的方式获得临时密钥</span><br><span class="line">3. 双方用临时密钥加密小心进行通信</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Diffie-Hellman 密钥交换解决</li>
+<li>公钥密码解决：使用公钥加密，使用解密密钥解密。公钥对所有人公开，但是解密密钥是私有的，只有拥有解密密钥才能解密</li>
+</ul>
+<span id="more"></span>
+<h3 id="公钥密码">公钥密码</h3>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. Bob 生成一组公钥和私钥</span><br><span class="line">2. Bob 将公钥发给 Alice</span><br><span class="line">3. Alice 用公钥加密自己的消息，发给 Bob</span><br><span class="line">4. Bob 用私钥解密获得消息</span><br></pre></td></tr></table></figure>
+<p>公钥密码解决了配送问题，但是没有解决密钥公证的问题。</p>
+<h3 id="rsa">RSA</h3>
+<p>加密过程，加密的明文必须小于 <span
+class="math inline">\(N\)</span></p>
+<p><span class="math display">\[
+ciphertext=plaintext^{E}~mod~N
+\]</span></p>
+<p>其中 <span class="math inline">\(E\)</span> 和 <span
+class="math inline">\(N\)</span> 的组合就是公钥</p>
+<p>解密过程，解密的结果必须小于 <span
+class="math inline">\(N\)</span></p>
+<p><span class="math display">\[
+plaintext=ciphertext^{D}~mod~N
+\]</span></p>
+<p>其中 <span class="math inline">\(D\)</span> 和 <span
+class="math inline">\(N\)</span> 的组合就是私钥</p>
+<p><span class="math inline">\(D\)</span>、<span
+class="math inline">\(E\)</span>、<span class="math inline">\(N\)</span>
+生成步骤：求 <span class="math inline">\(N\)</span> -&gt; 求 <span
+class="math inline">\(L\)</span> -&gt; 求 <span
+class="math inline">\(E\)</span> -&gt; 求 <span
+class="math inline">\(D\)</span></p>
+<ol type="1">
+<li>求 <span class="math inline">\(N\)</span>：生成两个很大的质数 <span
+class="math inline">\(p\)</span>，<span
+class="math inline">\(q\)</span>，<span class="math inline">\(N=p \times
+q\)</span>，可以使用费马测试 <span
+class="math inline">\(p\)</span>，<span class="math inline">\(q\)</span>
+是否符合要求</li>
+<li>求 <span class="math inline">\(L\)</span>：计算得到 <span
+class="math inline">\(p-1\)</span>，<span
+class="math inline">\(q-1\)</span> 的最小公倍数 <span
+class="math inline">\(L=lcm(p-1, q-1)\)</span></li>
+<li>求 <span class="math inline">\(E\)</span>：找到一个满足在 <span
+class="math inline">\((1, L)\)</span> 之间的数，判断 <span
+class="math inline">\(gcd(E, L) = 1\)</span>
+即可，使用欧几里得算法判断</li>
+<li>求 <span class="math inline">\(D\)</span>：找到一个 D 满足 $ E
+D<sub>mod</sub>L = 1$</li>
 </ol>
-</section>
+<h3 id="练习测试">练习测试</h3>
+<ol type="1">
+<li>如果这样做，每一个人会知道其他所有剩余人的密钥。每一个人都是密钥中心。相当于每个人都可以知道其他人加密的消息。</li>
+<li>三重 DES 仍然是对称密码，没有解决密码配送问题，依然需要传输密钥</li>
+<li>1</li>
+<li>o o x o o</li>
+</ol>
 
     </div>
 
@@ -259,10 +265,7 @@ role="doc-backlink">↩︎</a></p></li>
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
-              <a href="/tags/math/" rel="tag"># math</a>
-              <a href="/tags/medium/" rel="tag"># medium</a>
-              <a href="/tags/string/" rel="tag"># string</a>
+              <a href="/tags/cipher/" rel="tag"># cipher</a>
           </div>
 
         
@@ -271,13 +274,10 @@ role="doc-backlink">↩︎</a></p></li>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/10/09/Reverse-Integer/" rel="prev" title="Reverse Integer">
-      <i class="fa fa-chevron-left"></i> Reverse Integer
+    <a href="/2023/03/22/Cipher-4/" rel="prev" title="Cipher 4">
+      <i class="fa fa-chevron-left"></i> Cipher 4
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/10/09/ML-Toys-Chapter-2-Naive-Bayesian/" rel="next" title="ML Toys Chapter 2 Naive Bayesian">
-      ML Toys Chapter 2 Naive Bayesian <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -336,7 +336,7 @@ role="doc-backlink">↩︎</a></p></li>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">复杂度分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E9%85%8D%E9%80%81%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">密钥配送问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E9%92%A5%E5%AF%86%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">公钥密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rsa"><span class="nav-number">3.</span> <span class="nav-text">RSA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0%E6%B5%8B%E8%AF%95"><span class="nav-number">4.</span> <span class="nav-text">练习测试</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
