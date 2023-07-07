@@ -28,7 +28,7 @@
 <meta property="og:description" content="下面的 DES 和 AES 都只能加密固定长度的明文。 对称密码 一串比特序列 A（0 1 0 1 1 1 0 1）和另一串比特序列 B（1 1 0 0 0 1 0 1）经过两次 xor 操作后会有 $ A B B &#x3D; A$ \[ 0 1 0 1 1 1 0 1 \bigoplus 1 1 0 0 0 1 0 1 &#x3D; 1 0 0 1 1 0 0 0 \] \[ 1 0 0 1 1 0 0 0 \b">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-20T15:17:48.000Z">
-<meta property="article:modified_time" content="2023-03-22T16:57:55.200Z">
+<meta property="article:modified_time" content="2023-07-07T09:47:23.069Z">
 <meta property="article:author" content="Hailin">
 <meta property="article:tag" content="cipher">
 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-23 00:57:55" itemprop="dateModified" datetime="2023-03-23T00:57:55+08:00">2023-03-23</time>
+                <time title="Modified: 2023-07-07 17:47:23" itemprop="dateModified" datetime="2023-07-07T17:47:23+08:00">2023-07-07</time>
               </span>
 
           
@@ -227,15 +227,15 @@
 位叫做一个分组。以分组位单位进行处理的密码算法也叫做分组密码。</p>
 <p>DES 加密过程：</p>
 <ol type="1">
-<li><p>将 64 比特的输入数据从中间分开，左边长度 32 比特，右边长度 32
-比特</p></li>
-<li><p>将右侧的 32 比特直接输出</p></li>
-<li><p>将右侧的 32 比特发送到轮函数</p></li>
-<li><p>轮函数接收子密钥和 32
-比特的右侧字符串的输入，得到一串随机的比特序列</p></li>
-<li><p>将步骤 4 产出的比特序列与左侧的 32 比特的字符串做 xor
-运算，将结果输出</p></li>
-<li><p>将左右两组 32 比特交换后输入到下一轮</p></li>
+<li>将 64 比特的输入数据从中间分开，左边长度 32 比特，右边长度 32
+比特</li>
+<li>将右侧的 32 比特直接输出</li>
+<li>将右侧的 32 比特发送到轮函数</li>
+<li>轮函数接收子密钥和 32
+比特的右侧字符串的输入，得到一串随机的比特序列</li>
+<li>将步骤 4 产出的比特序列与左侧的 32 比特的字符串做 xor
+运算，将结果输出</li>
+<li>将左右两组 32 比特交换后输入到下一轮</li>
 </ol>
 <p>通过反复上面 1 - 5 的过程，构成 Feistel 网络。如图所示</p>
 <p><img
@@ -290,7 +290,7 @@ class="math inline">\(R_n\)</span> 作为下一轮输入</li>
 的精妙之处。</p>
 <h3 id="aes">AES</h3>
 <p>AES 也是一种分组加密密码，密钥长度有 128，160， 192， 224， 256
-这几个选项。标准 AES 的分组长度为 128，迷药长度可以选择 128， 192， 256
+这几个选项。标准 AES 的分组长度为 128，密钥长度可以选择 128， 192， 256
 这 3 个选项</p>
 <p>加密过程</p>
 <ol type="1">
@@ -448,7 +448,7 @@ target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%AB%98%E7%
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -457,7 +457,7 @@ target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%AB%98%E7%
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">24</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
