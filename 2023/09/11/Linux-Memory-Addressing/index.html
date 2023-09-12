@@ -28,7 +28,7 @@
 <meta property="og:description" content="在 Linux 中，程序经过编译后会生成 object file,这个文件是没办法直接运行的，还需要经过 link 和 load 阶段。在 load 阶段会通过系统调用创建逻辑地址空间，读取 link 后的 elf 文件加载到内存里，并设置其运行的地址空间为对应的逻辑地址空间。CPU 运行加载在内存中的程序，读取指令，生成 逻辑地址 （或者叫做虚拟地址）。 在 x86 中需要区分 3 种地址：">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-09-11T12:19:16.000Z">
-<meta property="article:modified_time" content="2023-09-12T16:34:38.508Z">
+<meta property="article:modified_time" content="2023-09-12T16:35:11.552Z">
 <meta property="article:author" content="Hailin">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="memory">
@@ -183,7 +183,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-09-13 00:34:38" itemprop="dateModified" datetime="2023-09-13T00:34:38+08:00">2023-09-13</time>
+                <time title="Modified: 2023-09-13 00:35:11" itemprop="dateModified" datetime="2023-09-13T00:35:11+08:00">2023-09-13</time>
               </span>
 
           
@@ -227,7 +227,7 @@ Unit</strong> 处理得到 <strong>物理地址</strong> 。CPU 拿到
 <li>段标识符：长度为 16bit，又被称为段选择器</li>
 <li>偏移量：长度为 32bit</li>
 </ol>
-<p>段选择器，如下图所示，</p>
+<p>段选择器，如下图所示：</p>
 <p><img
 src="https://github.com/hailingu/hailingu.github.io/blob/master/images/lma-4.png?raw=true" /></p>
 <p>CPU 通过提供段寄存器存储段选择器，实现了段选择器的快速存取。CPU
