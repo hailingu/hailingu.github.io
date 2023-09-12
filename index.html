@@ -145,6 +145,93 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2023/09/11/Linux-Memory-Addressing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hailin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/09/11/Linux-Memory-Addressing/" class="post-title-link" itemprop="url">Linux Memory Addressing</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-09-11 20:19:16" itemprop="dateCreated datePublished" datetime="2023-09-11T20:19:16+08:00">2023-09-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-09-12 09:44:18" itemprop="dateModified" datetime="2023-09-12T09:44:18+08:00">2023-09-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在 Linux 中，ELF 典型的文件构成如下图所示</p>
+<figure>
+<img
+src="https://github.com/hailingu/hailingu.github.io/blob/master/images/lma-2.png?raw=true"
+alt="lma-2" />
+<figcaption aria-hidden="true">lma-2</figcaption>
+</figure>
+<p>ELF 文件被分成了多个段，每个段由<strong>逻辑地址</strong>组成。</p>
+<p>在 x86 中需要区分 3 种地址：</p>
+<ul>
+<li>逻辑地址：一个逻辑地址的内容表示一个操作数或者指令，逻辑地址本身由<strong>段选择符</strong>和<strong>段内偏移量</strong>组成。比如下图的指令
+4，表示为 [CS:EIP]，即 CS 表示段选择符，EIP 表示段内偏移量</li>
+<li>线性地址：32bit 无符号数表达的连续地址</li>
+<li>物理地址：CPU 往内存地址上发送的信号所表达的内存单元地址</li>
+</ul>
+<p>它们的关系如图所示：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/09/11/Linux-Memory-Addressing/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://hailingu.com/2023/03/15/Computational-Advertising-2-Introduction-to-Online-Advertising/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -887,106 +974,6 @@ target="_blank" rel="noopener" href="https://book.douban.com/subject/34804492/">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/07/31/ML-Toys-Chapter-1-Gradient-Descent/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hailin">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/31/ML-Toys-Chapter-1-Gradient-Descent/" class="post-title-link" itemprop="url">Chapter 1 Gradient Descent</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-07-31 14:36:43" itemprop="dateCreated datePublished" datetime="2019-07-31T14:36:43+08:00">2019-07-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-04 01:30:35" itemprop="dateModified" datetime="2022-11-04T01:30:35+08:00">2022-11-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="所谓理论">所谓理论</h3>
-<p>梯度下降是数学优化里面的一个方法，数学优化的问题被定义成：</p>
-<p><span class="math display">\[
-\begin{split}
-&amp; \text{minimize } &amp; f_0(x) \\
-&amp; \text{subject to } &amp; f_i(x) \lt b_i,\ i = 1, \cdot \cdot
-\cdot, m.
-\end{split}
-\]</span></p>
-<p><span class="math inline">\(\mathbf{x}\)</span>
-表示的是一个向量，对于所有满足约束条件的 <span
-class="math inline">\(z\)</span>，如果 <span
-class="math inline">\(f(\mathbf{z}) \gt f(\mathbf{x}^{*})\)</span>，那么
-<span class="math inline">\(\mathbf{x}^{*}\)</span> 就是结果向量。</p>
-<p>Gradient Descent，或者叫做梯度下降，就给出了求解 <span
-class="math inline">\(\mathbf{x}^{*}\)</span>
-的一个方法。当然使用梯度下降求解 <span
-class="math inline">\(\mathbf{x}^{*}\)</span> 是有前提条件的，即 <span
-class="math inline">\(f: \mathbf{R}^n \rightarrow R\)</span>上是<a
-target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E5%BE%AE%E5%87%BD%E6%95%B0">可微</a>的，并且去掉了其他的约束条件，所以它是求解无约束最优化的一种方法。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/07/31/ML-Toys-Chapter-1-Gradient-Descent/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1056,7 +1043,7 @@ target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E5%
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1065,7 +1052,7 @@ target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E5%
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>

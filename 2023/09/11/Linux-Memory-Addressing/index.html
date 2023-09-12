@@ -20,15 +20,22 @@
     var CONFIG = {"hostname":"hailingu.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="http://hailingu.com/tags/list/index.html">
+  <meta name="description" content="在 Linux 中，ELF 典型的文件构成如下图所示   lma-2  ELF 文件被分成了多个段，每个段由逻辑地址组成。 在 x86 中需要区分 3 种地址：  逻辑地址：一个逻辑地址的内容表示一个操作数或者指令，逻辑地址本身由段选择符和段内偏移量组成。比如下图的指令 4，表示为 [CS:EIP]，即 CS 表示段选择符，EIP 表示段内偏移量 线性地址：32bit 无符号数表达的连续地址 物理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux Memory Addressing">
+<meta property="og:url" content="http://hailingu.com/2023/09/11/Linux-Memory-Addressing/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="在 Linux 中，ELF 典型的文件构成如下图所示   lma-2  ELF 文件被分成了多个段，每个段由逻辑地址组成。 在 x86 中需要区分 3 种地址：  逻辑地址：一个逻辑地址的内容表示一个操作数或者指令，逻辑地址本身由段选择符和段内偏移量组成。比如下图的指令 4，表示为 [CS:EIP]，即 CS 表示段选择符，EIP 表示段内偏移量 线性地址：32bit 无符号数表达的连续地址 物理">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-09-11T12:19:16.000Z">
+<meta property="article:modified_time" content="2023-09-12T01:44:18.560Z">
 <meta property="article:author" content="Hailin">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="memory">
+<meta property="article:tag" content="addressing">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://hailingu.com/tags/list/">
+<link rel="canonical" href="http://hailingu.com/2023/09/11/Linux-Memory-Addressing/">
 
 
 <script id="page-configurations">
@@ -36,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tag: list | Blog</title>
+  <title>Linux Memory Addressing | Blog</title>
   
 
 
@@ -139,51 +146,131 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">list
-          <small>Tag</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2023/09/11/Linux-Memory-Addressing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hailin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux Memory Addressing
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-09-11 20:19:16" itemprop="dateCreated datePublished" datetime="2023-09-11T20:19:16+08:00">2023-09-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-09-12 09:44:18" itemprop="dateModified" datetime="2023-09-12T09:44:18+08:00">2023-09-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2019</span>
+        <p>在 Linux 中，ELF 典型的文件构成如下图所示</p>
+<figure>
+<img
+src="https://github.com/hailingu/hailingu.github.io/blob/master/images/lma-2.png?raw=true"
+alt="lma-2" />
+<figcaption aria-hidden="true">lma-2</figcaption>
+</figure>
+<p>ELF 文件被分成了多个段，每个段由<strong>逻辑地址</strong>组成。</p>
+<p>在 x86 中需要区分 3 种地址：</p>
+<ul>
+<li>逻辑地址：一个逻辑地址的内容表示一个操作数或者指令，逻辑地址本身由<strong>段选择符</strong>和<strong>段内偏移量</strong>组成。比如下图的指令
+4，表示为 [CS:EIP]，即 CS 表示段选择符，EIP 表示段内偏移量</li>
+<li>线性地址：32bit 无符号数表达的连续地址</li>
+<li>物理地址：CPU 往内存地址上发送的信号所表达的内存单元地址</li>
+</ul>
+<p>它们的关系如图所示：</p>
+<span id="more"></span>
+<figure>
+<img
+src="https://github.com/hailingu/hailingu.github.io/blob/master/images/lma-1.png?raw=true"
+alt="lma-1" />
+<figcaption aria-hidden="true">lma-1</figcaption>
+</figure>
+<p>程序里的逻辑地址，经过<strong>Memory Management Unit(MMU)</strong>
+的硬件电路 <strong>Segmentation Unit</strong> 的处理，得到
+<strong>线性地址</strong>。<strong>线性地址</strong> 由 <strong>Paging
+Unit</strong> 处理得到 <strong>物理地址</strong> 。CPU 拿到
+<strong>物理地址</strong>
+后，往内存地址总线上发送内存访问单元的物理地址信号，并由内存仲裁器决定，CPU
+是否能立刻访问对应的内存地址。</p>
+<h2 id="段选择器和段寄存器">段选择器和段寄存器</h2>
+<p>一个逻辑地址由段标识符和偏移量组成：</p>
+<ol type="1">
+<li>段标识符：长度为 16bit，又被称为段选择器</li>
+<li>偏移量：长度为 32bit</li>
+</ol>
+<p>CPU 通过提供段寄存器存储段选择器，实现了段选择器的快速存取。CPU
+一共提供了 cs、ss、ds、es、fs、gs 共 6 个段寄存器：</p>
+<ol type="1">
+<li>cs：存放代码段选择器，其中使用 2bit 为表示 CPU 的运行模式，0
+表示内核模式，3 表示用户模式</li>
+<li>ss：存放程序的栈段选择器</li>
+<li>ds：存放数据段选择器</li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-07-30T15:23:46+08:00"
-              content="2019-07-30">
-          07-30
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/memory/" rel="tag"># memory</a>
+              <a href="/tags/addressing/" rel="tag"># addressing</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/07/30/Add-Two-Numbers/" itemprop="url">
-            <span itemprop="name">Add Two Numbers</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/03/15/Computational-Advertising-2-Introduction-to-Online-Advertising/" rel="prev" title="Computational Advertising 2 Introduction to Online Advertising">
+      <i class="fa fa-chevron-left"></i> Computational Advertising 2 Introduction to Online Advertising
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -236,6 +323,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AE%B5%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E6%AE%B5%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">段选择器和段寄存器</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

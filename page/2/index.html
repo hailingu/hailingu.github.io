@@ -145,6 +145,106 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/07/31/ML-Toys-Chapter-1-Gradient-Descent/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hailin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/07/31/ML-Toys-Chapter-1-Gradient-Descent/" class="post-title-link" itemprop="url">Chapter 1 Gradient Descent</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-07-31 14:36:43" itemprop="dateCreated datePublished" datetime="2019-07-31T14:36:43+08:00">2019-07-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-11-04 01:30:35" itemprop="dateModified" datetime="2022-11-04T01:30:35+08:00">2022-11-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="所谓理论">所谓理论</h3>
+<p>梯度下降是数学优化里面的一个方法，数学优化的问题被定义成：</p>
+<p><span class="math display">\[
+\begin{split}
+&amp; \text{minimize } &amp; f_0(x) \\
+&amp; \text{subject to } &amp; f_i(x) \lt b_i,\ i = 1, \cdot \cdot
+\cdot, m.
+\end{split}
+\]</span></p>
+<p><span class="math inline">\(\mathbf{x}\)</span>
+表示的是一个向量，对于所有满足约束条件的 <span
+class="math inline">\(z\)</span>，如果 <span
+class="math inline">\(f(\mathbf{z}) \gt f(\mathbf{x}^{*})\)</span>，那么
+<span class="math inline">\(\mathbf{x}^{*}\)</span> 就是结果向量。</p>
+<p>Gradient Descent，或者叫做梯度下降，就给出了求解 <span
+class="math inline">\(\mathbf{x}^{*}\)</span>
+的一个方法。当然使用梯度下降求解 <span
+class="math inline">\(\mathbf{x}^{*}\)</span> 是有前提条件的，即 <span
+class="math inline">\(f: \mathbf{R}^n \rightarrow R\)</span>上是<a
+target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E5%BE%AE%E5%87%BD%E6%95%B0">可微</a>的，并且去掉了其他的约束条件，所以它是求解无约束最优化的一种方法。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/31/ML-Toys-Chapter-1-Gradient-Descent/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://hailingu.com/2019/07/31/Find-Median-Sorted-Arrays/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -627,7 +727,7 @@ Machine Learning 有点凉凉的感觉，就如 40 年前一样。</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -636,7 +736,7 @@ Machine Learning 有点凉凉的感觉，就如 40 年前一样。</p>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -783,6 +883,59 @@ window.addEventListener('pjax:success', () => {
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
